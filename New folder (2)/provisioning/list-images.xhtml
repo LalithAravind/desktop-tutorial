@@ -1,0 +1,98 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:c1="http://cloudone.cognizant.com/jsf/extn"
+	template="../template/layout-new.xhtml"
+	xmlns:shiro="http://shiro.apache.org/tags">
+
+	<ui:define name="title">
+		
+	</ui:define>
+	<ui:define name="pageName">
+	 	<h:outputText value="#{imageDataGridController.pageMetaData.pageName}" />
+	</ui:define>
+	<ui:define name="leftNavContent">
+	<ui:param name="controller" value="#{imageDataGridController}" />
+	<ui:param name="visibleToUser" value="none" />
+	<ui:include src="../template/dt/dt-html/smartview.xhtml"/>
+	</ui:define>
+	<ui:define name="actionButtonsContent">
+	<h:form id="actionFormId" enctype="multipart/form-data" > 
+	<a4j:outputPanel id="imageActionPanel"> 
+			<ui:param name="entityType" value="#{imageDataGridController.entityType}" />
+			<ui:include src="./image-action.xhtml"></ui:include>
+			<ui:include src="./image-popup.xhtml"></ui:include>	
+	</a4j:outputPanel>
+	</h:form>	
+	</ui:define>
+
+	<ui:define name="content">
+		<script type="text/javascript"
+			src="#{navigationController.resourceServerAddress}/script/page/provisioning/image.js"></script>
+		<body>
+		<f:view contentType="text/html">
+			
+			<div id="wrap"><!-- These 2 divs will be removed once JS refactoring is done -->
+			<div id="main">
+			<table class="screenLayout1">
+			<tr>
+			<td>
+			<div id="statusHeader">
+			<h:form id="statusSummaryFormId">
+			<a4j:jsFunction name="reRenderAreas" reRender="statusSumHdrId,text,imageActionPanel,datagridOutputPanel" oncomplete="bindAllEvents();"/>
+			<ui:define name="mainStatusHeaderInclusion">
+								<ui:param name="gridController" value="#{imageDataGridController}" />
+								<ui:param name="showAll" value="no" />
+								<ui:param name="exportFormats" value="yes" />
+								<ui:param name="updateInfoRefreshIcon" value="yes" />
+								<ui:param name="dataSummary" value="yes" />
+								<ui:param name="bean" value="#{imageDataGridController.imageBean}" />
+								<ui:include src="../template/status-header.xhtml" />
+							</ui:define>		
+			
+			</h:form> 
+			<a4j:outputPanel id="conExtableId1">
+						<ui:define name="tabPanelInclusion">
+							<ui:param name="dataGridController"
+								value="#{imageDataGridController}" />
+							<ui:param name="searchActionMethod" value="custom" />
+							<ui:include src="../template/tab-search-header.xhtml"></ui:include>
+						</ui:define>
+					</a4j:outputPanel>
+					</div>
+					<table class="treeDatagridLayout1">
+					<tr>
+						<td class="firstColumn">
+					    </td>
+							<td class="secondColumn">
+							
+							<a4j:outputPanel
+								id="datagridOutputPanel">
+								<ui:param name="controller" value="#{imageDataGridController}" />
+								 <ui:param name="dataGridIdPrefix" value="DataGrid" />
+								  <ui:param name="entityType" value="#{imageDataGridController.entityType}" />
+								 	<ui:include src="../template/dt/dt-list-images.xhtml" />
+								<!-- Data grid section added here -->
+							</a4j:outputPanel>
+							</td>
+						</tr>
+					</table>
+			
+			</td>
+			</tr>
+			</table>
+			</div>
+			</div>
+			<script type="text/javascript">
+		 		cssdropdown.startMenu("chromemenu1");
+        </script>
+		</f:view>
+		</body>
+
+	</ui:define>
+</ui:composition>

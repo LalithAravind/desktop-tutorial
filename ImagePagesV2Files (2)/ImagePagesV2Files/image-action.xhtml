@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:c1="http://cloudone.cognizant.com/jsf/extn"
+	xmlns:shiro="http://shiro.apache.org/tags">
+
+
+	<!--Action definition starts here-->
+	<table class="buttonLayout1">
+	<a4j:commandLink id="deleteImageOperation" 
+	  			                 action="#{imageActionController.delete}" reRender="datagridOutputPanel,treeId"
+	  			                  oncomplete="showImageMessage('#{imageActionController.errorCode}','#{imageActionController.messageCode}');" />
+	<tr>
+		<td class="leftButton">
+			 <a4j:commandButton id="create_datastore" value="#{labels.createNew_command_button_label}" action="#{imageActionController.launchCreate}" ajaxSingle="true"/>
+		</td>
+		<td class="rightButtonDG">
+		<div class="SetRight" id="chromemenu1">	<a4j:commandButton id="delete"
+					value="#{labels.delete_command_button_label}"
+					action="#{imageActionController.performAction}"
+					oncomplete="preDeleteCheck('#{imageActionController.selectedGridRows}','#{imageActionController.itemSelected}','actionFormId','deleteImageOperation','#{imageActionController.errorCode}','#{imageActionController.instanceID}');" >
+						<f:param name="operation" value="DELETE_IMAGE" />
+					</a4j:commandButton>
+		</div>
+		</td>
+	</tr>
+		</table>			
+		<script type="text/javascript">
+			cssdropdown.startMenu("chromemenu1");
+			
+		</script>
+	
+	<!--Action definition ends here-->
+</ui:composition>
+	

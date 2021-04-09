@@ -1,0 +1,1459 @@
+{
+    "Dashboard": {
+        "PageName": "Dashboard",
+        "MenuName": "Home",
+        "HelpFilePath": "/About Cloud360/Understanding the Dashboard Page.htm"
+    },
+    "ListInstance": {
+        "PageName": "Compute",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Provisioning Compute Instances.htm",
+        "Entities": {
+            "INSTANCE": {
+            	"ApplicableProviders" : "AMAZON,VMWARE,SAVVIS,AZURE,OPENSTACK,TERREMARK_ECLOUD,SCVMM",
+                "DataGridColumns": "instanceName@@@dg_header_Name_in_Provider,nickName@@@dg_header_Instance,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,userGroupName@@@dg_header_User_Group,monitoringTemplateName@@@dg_header_Monitoring_Profile,applicationInstanceName@@@dg_header_application_name,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,montoringProfileState@@@dg_header_Monitoring_Profile_State,instanceState@@@dg_header_Instance_State,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,complianceList@@@dg_header_complianceList,agentState@@@dg_header_Agent_State,complianceState@@@dg_header_ComplianceState,patchWaitingToBeApplied@@@dg_header_patch_WaitingToBeApplied",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[applicationInstanceName@@@dg_header_application_name@@@text],[userGroupName@@@dg_header_User_Group@@@text]",
+                "PDFXLSColumns": "[osName@@@dg_header_OS@@@C0M1],[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[state@@@dg_header_State@@@C1M2],[severity@@@dg_header_Severity@@@C1M1],[displayIPs@@@dg_header_IP_Address@@@C2T1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2B1,monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M1],[agentState@@@dg_header_Agent_State@@@C2M2],[userFullName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[applicationInstanceName@@@dg_header_application_name@@@C3B2],[instanceLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-instance.xhtml"
+            },
+            "PHYSICAL_INSTANCE": {
+            	"ApplicableProviders" : "PHYSICAL_SERVERS",
+                "DataGridColumns": "instanceName@@@dg_header_Name_in_Provider,nickName@@@dg_header_Instance,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,userGroupName@@@dg_header_User_Group,monitoringTemplateName@@@dg_header_Monitoring_Profile,applicationInstanceName@@@dg_header_application_name,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,montoringProfileState@@@dg_header_Monitoring_Profile_State,instanceState@@@dg_header_Instance_State,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,complianceList@@@dg_header_complianceList,agentState@@@dg_header_Agent_State,complianceState@@@dg_header_ComplianceState,patchWaitingToBeApplied@@@dg_header_patch_WaitingToBeApplied",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[applicationInstanceName@@@dg_header_application_name@@@text],[userGroupName@@@dg_header_User_Group@@@text]",
+                "PDFXLSColumns": "[osName@@@dg_header_OS@@@C0M1],[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[state@@@dg_header_State@@@C1M2],[severity@@@dg_header_Severity@@@C1M1],[displayIPs@@@dg_header_IP_Address@@@C2T1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2B1,monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M1],[agentState@@@dg_header_Agent_State@@@C2M2],[userFullName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[applicationInstanceName@@@dg_header_application_name@@@C3B2],[instanceLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-instance-physical.xhtml"
+            }
+        }
+    },
+    "VMWareCreateInstance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {
+            "DATASTORE": {
+                "DataGridColumns": "dsName@@@dg_header_Name,capacityDisplay@@@dg_header_Capacity,provisionedDisplay@@@dg_header_Provisioned,freeMemoryDisplay@@@dg_header_Free,dsType@@@dg_header_Type,thinProvisionDisplay@@@dg_header_Thin_Provisioning,accessDisplay@@@dg_header_Access",
+                "SearchableColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "PDFXLSColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-vmware-datastores-create-instance.xhtml"
+            },
+            "CLUSTERDATASTORE": {
+                "DataGridColumns": "resPoolName@@@dg_header_Name,capacity@@@dg_header_Capacity,freeSpace@@@dg_header_Free,dsType@@@dg_header_Type,resourceCount@@@dg_header_datastore_attached",
+                "SearchableColumns": "[resPoolName@@@dg_header_Name@@@text],[capacity@@@dg_header_Capacity@@@text],[freeSpace@@@dg_header_Free@@@text]",
+                "PDFXLSColumns": "",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-vmware-cluster-datastores.xhtml"
+            }
+        }
+    },
+    "VMWareCreateInstanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {
+            "DATASTORE": {
+                "DataGridColumns": "dsName@@@dg_header_Name,capacityDisplay@@@dg_header_Capacity,provisionedDisplay@@@dg_header_Provisioned,freeMemoryDisplay@@@dg_header_Free,dsType@@@dg_header_Type,thinProvisionDisplay@@@dg_header_Thin_Provisioning,accessDisplay@@@dg_header_Access",
+                "SearchableColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "PDFXLSColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-vmware-datastores-create-instance.xhtml"
+            } ,
+            "CLUSTERDATASTORE": {
+                "DataGridColumns": "resPoolName@@@dg_header_Name,capacity@@@dg_header_Capacity,freeSpace@@@dg_header_Free,dsType@@@dg_header_Type,resourceCount@@@dg_header_datastore_attached",
+                "SearchableColumns": "[resPoolName@@@dg_header_Name@@@text],[capacity@@@dg_header_Capacity@@@text],[freeSpace@@@dg_header_Free@@@text]",
+                "PDFXLSColumns": "",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-vmware-cluster-datastores.xhtml"
+            }
+        }
+    },
+    "AWSCreateInsance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {
+            "IMAGES_CREATE_NEW_INSTANCE": {
+                "DataGridColumns": "amiID@@@dg_header_Image_ID,manifest@@@dg_header_Name,rootDevice@@@dg_header_Root_Device,operatingSystem@@@dg_header_Operating_System,description@@@dg_header_Description,architecture@@@dg_header_Architecture",
+                "SearchableColumns": "[amiID@@@dg_header_Image_ID@@@text],[rootDevice@@@dg_header_Root_Device@@@text],[operatingSystem@@@dg_header_Operating_System@@@text],[description@@@dg_header_Description@@@text],[architecture@@@dg_header_Architecture@@@text],[manifest@@@dg_header_Name@@@text]",
+                "PDFXLSColumns": "[amiID@@@dg_header_Image_ID@@@text],[rootDevice@@@dg_header_Root_Device@@@text],[operatingSystem@@@dg_header_Operating_System@@@text],[description@@@dg_header_Description@@@text],[architecture@@@dg_header_Architecture@@@text],[manifest@@@dg_header_Name@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-aws-create-instance.xhtml"
+            }
+        }
+    },
+    "AWSCreateInstanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {
+            "IMAGES_CREATE_NEW_INSTANCE": {
+                "DataGridColumns": "amiID@@@dg_header_Image_ID,manifest@@@dg_header_Name,rootDevice@@@dg_header_Root_Device,operatingSystem@@@dg_header_Operating_System,description@@@dg_header_Description,architecture@@@dg_header_Architecture",
+                "SearchableColumns": "[amiID@@@dg_header_Image_ID@@@text],[rootDevice@@@dg_header_Root_Device@@@text],[operatingSystem@@@dg_header_Operating_System@@@text],[description@@@dg_header_Description@@@text],[manifest@@@dg_header_Name@@@text],[architecture@@@dg_header_Architecture@@@text]",
+                "PDFXLSColumns": "[amiID@@@dg_header_Image_ID@@@text],[rootDevice@@@dg_header_Root_Device@@@text],[operatingSystem@@@dg_header_Operating_System@@@text],[description@@@dg_header_Description@@@text],[manifest@@@dg_header_Name@@@text],[architecture@@@dg_header_Architecture@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-aws-create-instance.xhtml"
+            }
+        }
+    },
+    "AixCreateInsance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {
+        "DISK_STORAGE_POOL": {
+            "DataGridColumns": "dsName@@@Name,capacityDisplay@@@Capacity,provisionedDisplay@@@Provisioned,freeMemoryDisplay@@@Free,dsType@@@Type,thinProvisionDisplay@@@Thin Provisioning,accessDisplay@@@Access",
+            "SearchableColumns": "[dsName@@@Name@@@text],[dsType@@@Location@@@text],[freeMemoryDisplay@@@Free@@@text]",
+            "PDFXLSColumns": "[dsName@@@Name@@@text],[dsType@@@Location@@@text],[freeMemoryDisplay@@@Free@@@text]",
+            "SelectionMode": "single",
+            "DataGridDisplayRecordCount": "10",
+            "ColumnsIncludeFile": "dt-aix-create-instance.xhtml"
+            }
+        }
+    },
+    "AixCreateInsanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {
+            "DISK_STORAGE_POOL": {
+                "DataGridColumns": "dsName@@@dg_header_Name,capacityDisplay@@@dg_header_Capacity,provisionedDisplay@@@dg_header_Provisioned,freeMemoryDisplay@@@dg_header_Free,dsType@@@dg_header_Type,thinProvisionDisplay@@@dg_header_Thin_Provisioning,accessDisplay@@@dg_header_Access",
+                "SearchableColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "PDFXLSColumns": "[dsName@@@dg_header_Name@@@text],[dsType@@@dg_header_Location@@@text],[freeMemoryDisplay@@@dg_header_Free@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-aix-create-instance.xhtml"
+            }
+        }
+    },
+    "AzureCreateInsance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {
+            "AZURE_IMAGE_CREATE_INSTANCE": {
+                "DataGridColumns": "name@@@dg_header_Image_Name,description@@@dg_header_Details,operatingSystem@@@dg_header_OS",
+                "SearchableColumns": "[name@@@dg_header_Image_Name@@@text],[description@@@dg_header_Details@@@text],[operatingSystem@@@dg_header_OS@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Image_Name@@@text],[description@@@dg_header_Details@@@text],[operatingSystem@@@dg_header_OS@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-azure-create-instance.xhtml"
+            }
+        }
+    },
+    "AzureCreateInstanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {
+            "AZURE_IMAGE_CREATE_INSTANCE": {
+                "DataGridColumns": "name@@@dg_header_Image_Name,description@@@dg_header_Details,operatingSystem@@@dg_header_OS",
+                "SearchableColumns": "[name@@@dg_header_Image_Name@@@text],[description@@@dg_header_Details@@@text],[operatingSystem@@@dg_header_OS@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Image_Name@@@text],[description@@@dg_header_Details@@@text],[operatingSystem@@@dg_header_OS@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-azure-create-instance.xhtml"
+            }
+        }
+    },
+    "SCVMMCreateInstance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "SCVMMCreateInstanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {}
+    },
+    "TerremarkCreateInstanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {}
+    },
+     "TerremarkCreateInstance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "OpenStackCreateInsance": {
+        "PageName": "Compute - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "OpenStackCreateInsanceProfile": {
+        "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Compute Profile.htm",
+        "Entities": {}
+    },
+    "PhysicalServerCreateInstance": {
+        "PageName": "Compute - Add New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "SoftLayerCreateInsance":{
+       "PageName": "Compute - Create New",
+       "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "SoftLayerCreateInstanceProfile":{
+     "PageName": "Compute Profiles - Create New",
+        "MenuName": "Compute",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {}
+    },
+    "ListStorageProfiles": {
+        "PageName": "Storage Profiles",
+        "MenuName": "Storage Profiles",
+        "HelpFilePath": "/Automation/Working with Storage Profiles.htm",
+        "Entities": {
+            "STORAGE_PROFILE": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "name@@@dg_header_Name,tags@@@dg_header_Tags,owner@@@dg_header_Owner,updatedDate@@@dg_header_Last_Modification_Time@@@date,volumeType@@@dg_header_Volume_Type,iops@@@dg_header_IOPS,volumeSizeWithUnits@@@dg_header_Size",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all],[owner@@@dg_header_Owner@@@text],[volumeType@@@dg_header_Volume_Type@@@text],[volumeSize@@@dg_header_Size@@@number],[iops@@@dg_header_IOPS@@@number],[updatedDate@@@dg_header_Last_Modification_Time@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[owner@@@dg_header_Owner@@@C2T1],[updatedDate@@@dg_header_Last_Modification_Time@@@C2B1@@@date],[volumeType@@@dg_header_Volume_Type@@@C3T1],[volumeSizeWithUnits@@@dg_header_Size@@@C3B1],[iops@@@dg_header_IOPS@@@number]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-storage-profiles.xhtml"
+            },
+             "NETAPPSTORAGECATALOG": {
+             	"ApplicableSecondaryResources" : "NETAPP",
+                "DataGridColumns": "name@@@dg_header_Name,description@@@dg_header_Tags,storageTypeDisplay@@@dg_header_Type",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[description@@@dg_header_Description@@@text],[storageTypeDisplay@@@dg_header_Type@@@number]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[description@@@dg_header_Tags@@@C1B1],[storageTypeDisplay@@@dg_header_Type@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-netapp-storage-profiles-hdr.xhtml"
+            }
+        }
+    },
+    "CreateStorageProfiles": {
+        "PageName": "Storage Profiles - Create New",
+        "MenuName": "Storage Profiles",
+        "HelpFilePath": "/Automation/Creating Storage Profiles.htm",
+        "Entities": {}
+    },
+    "ModifyStorageProfiles": {
+        "PageName": "Storage Profiles - Modify",
+        "MenuName": "Storage Profiles",
+        "HelpFilePath": "/Automation/Editing Storage Profiles.htm",
+        "Entities": {}
+    },
+    "ListDatastores": {
+        "PageName": "Storage",
+        "MenuName": "Storage",
+        "HelpFilePath": "/Provisioning/Provisioning Storage.htm",
+          "Entities": {
+            "EBS_VOLUME": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "volumeID@@@dg_header_Volume_ID,clusterName@@@dg_header_Availability_Zone,severity@@@dg_header_Severity,ebsSize@@@dg_header_Size,instanceNickName@@@dg_header_Instance_Attached_To,status@@@dg_header_Status,EBSCreatedDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,snapshotID@@@dg_header_Source_Snapshot_ID,complianceState@@@dg_header_ComplianceState,EBSVolumeDetailsID@@@dg_header_EBSVolumeDetailsID,storageVolumeTypeName@@@dg_header_Volume_Type,storageProfileName@@@dg_header_Storage_Profile_Name,monitoringProfileName@@@dg_header_Monitoring_Profile,monitoringProfileStatus@@@dg_header_Monitoring_Profile_State,Encrypted@@@dg_header_Encrypt",
+                "SearchableColumns": "[volumeID@@@dg_header_Volume_ID@@@text],[clusterName@@@dg_header_Availability_Zone@@@text],[ebsSize@@@dg_header_Size@@@number],[instanceNickName@@@dg_header_Instance_Attached_To@@@text],[status@@@dg_header_Status@@@text],[snapshotID@@@dg_header_Source_Snapshot_ID@@@text],[storageVolumeTypeName@@@dg_header_Volume_Type@@@text],[EBSCreatedDate@@@dg_header_Created_at@@@text],[storageProfileName@@@dg_header_Storage_Profile_Name@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@text],[Encrypted@@@dg_header_Encrypt@@@text]",
+                "PDFXLSColumns": "[volumeID@@@dg_header_Volume_ID@@@C1T1],[clusterName@@@dg_header_Availability_Zone@@@C1B1],[severity@@@dg_header_Severity@@@C1M1],[ebsSize@@@dg_header_Size__GB_@@@C2T1],[instanceNickName@@@dg_header_Instance_Attached_To@@@C1B2],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B2],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@C2M1],[status@@@dg_header_Status@@@C2M2],[snapshotID@@@dg_header_Source_Snapshot_ID@@@C3B2],[storageVolumeTypeName@@@dg_header_Volume_Type@@@C2B1],[EBSCreatedDate@@@dg_header_Created_at@@@C3B1],[storageProfileName@@@dg_header_Storage_Profile_Name@@@C3T1],[Encrypted@@@dg_header_Encrypt@@@C3M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-ebs-volume-hdr.xhtml"
+            },
+             "DATASTORE_VMWARE": {
+             	"ApplicableProviders" : "VMWARE",
+                "DataGridColumns": "dsName@@@dg_header_Datastore,parentDataCenter@@@dg_header_Datacenter,resourcePoolName@@@dg_header_ResourcePoolName,parentHost@@@dg_header_Host,dsCapacity@@@dg_header_Size,dsFreeMemory@@@dg_header_Free_Space,dsProvisioned@@@dg_header_Provisioned,dsType@@@dg_header_Type,dsThinProvision@@@dg_header_Thin_Provisioning,dsAccess@@@dg_header_Access_Type,location@@@dg_header_Location",
+                "SearchableColumns": "[dsName@@@dg_header_Datastore@@@text],[parentDataCenter@@@dg_header_Datacenter@@@text],[resourcePoolName@@@dg_header_ResourcePoolName@@@text],[parentHost@@@dg_header_Host@@@text],[dsCapacity@@@dg_header_Size@@@number],[dsFreeMemory@@@dg_header_Free_Space@@@text],[dsProvisioned@@@dg_header_Provisioned@@@text],[dsType@@@dg_header_Type@@@text],[dsThinProvision@@@dg_header_Thin_Provisioning@@@text],[location@@@dg_header_Location@@@text]",
+                "PDFXLSColumns": "[dsName@@@dg_header_Datastore@@@C1T1],[dsType@@@dg_header_Type@@@C1B1],[parentDataCenter@@@dg_header_Datacenter@@@C1B2],[resourcePoolName@@@dg_header_ResourcePoolName@@@C1B3],[parentHost@@@dg_header_Host@@@C1B4],[dsCapacity@@@dg_header_Size__GB_@@@C2T1],[dsProvisioned@@@dg_header_Provisioned@@@C2B1],[dsFreeMemory@@@dg_header_Free_Space@@@C2B2],[location@@@dg_header_Location@@@C3T1],[dsThinProvision@@@dg_header_Thin_Provisioning@@@C3B1],[dsAccess@@@dg_header_Access_Type@@@C3B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-datastore-hdr.xhtml"
+            },
+             "DATASTORE_POWERVM": {
+             	"ApplicableProviders" : "POWERVM",
+                "DataGridColumns": "dsName@@@dg_header_Storage_Pool,dsCapacity@@@dg_header_Capacity,dsUsed@@@dg_header_Used,dsFreeMemory@@@dg_header_Free,dsType@@@dg_header_Location,createdTime@@@dg_header_Created_Time@@@date",
+                "SearchableColumns": "[dsName@@@dg_header_Datastore@@@text],[dsType@@@dg_header_Location@@@text],[dsCapacity@@@dg_header_Size@@@number],[dsFreeMemory@@@dg_header_Free_Space@@@number]",
+                "PDFXLSColumns": "[dsName@@@dg_header_Storage_Pool@@@C1T1],[dsCapacity@@@dg_header_Capacity_GB_@@@C2T1],[dsUsed@@@dg_header_Used@@@C2B1],[dsFreeMemory@@@dg_header_Free@@@C2B2],[dsType@@@dg_header_Location@@@C3T1],[createdTime@@@dg_header_Created_Time@@@C3B1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-powervm-datastore-hdr.xhtml"
+            },
+             "DATASTORE_NETAPP": {
+             	"ApplicableSecondaryResources" : "NETAPP",
+                "DataGridColumns": "name@@@dg_header_name,availableCapacity@@@dg_header_avail_capacity,totalCapacity@@@dg_header_tot_capacity,protocol@@@dg_header_protocol,blockType@@@dg_header_blocktype,storageType@@@dg_header_Type,storageProfileName@@@dg_header_storageProfileName,state@@@dg_header_State,status@@@dg_header_Status,complianceState@@@dg_header_ComplianceState,standardVolumeId@@@dg_header_StandardVolumeId",
+                "SearchableColumns": "[name@@@dg_header_name@@@text],[availableCapacity@@@dg_header_avail_capacity@@@text],[protocol@@@dg_header_protocol@@@number],[blockType@@@dg_header_blocktype@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_name@@@C1T1],[storageProfileName@@@dg_header_storageProfileName@@@C1B1],[state@@@dg_header_State@@@C1M1],[availableCapacity@@@dg_header_avail_capacity_GB@@@C2T1],[totalCapacity@@@dg_header_tot_capacity@@@C2T2],[protocol@@@dg_header_protocol@@@C3T1],[blockType@@@dg_header_blocktype@@@C3B2],[storageType@@@dg_header_Type@@@C3B1],[status@@@dg_header_Status@@@C2M1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-netapp-datastore-hdr.xhtml"
+            },
+            "DATASTORE_OPENSTACK": {
+            	"ApplicableProviders" : "OPENSTACK",
+                "DataGridColumns": "volumeName@@@dg_header_Volume_Name,clusterName@@@dg_header_Availability_Zone,ebsSize@@@dg_header_Size,instanceNickName@@@dg_header_Instance_Attached_To,status@@@dg_header_Status,EBSCreatedDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,snapshotID@@@dg_header_Source_Snapshot_ID,complianceState@@@dg_header_ComplianceState,EBSVolumeDetailsID@@@dg_header_EBSVolumeDetailsID,storageVolumeTypeName@@@dg_header_Volume_Type",
+                "SearchableColumns": "[volumeName@@@dg_header_Volume_Name@@@text],[clusterName@@@dg_header_Availability_Zone@@@text],[ebsSize@@@dg_header_Size@@@number],[instanceNickName@@@dg_header_Instance_Attached_To@@@text],[status@@@dg_header_Status@@@text],[snapshotID@@@dg_header_Source_Snapshot_ID@@@text],[storageVolumeTypeName@@@dg_header_Volume_Type@@@text],[EBSCreatedDate@@@dg_header_Created_at@@@text],[storageProfileName@@@dg_header_Storage_Profile_Name@@@text]",
+                "PDFXLSColumns": "[volumeName@@@dg_header_Volume_Name@@@C1T1],[clusterName@@@dg_header_Availability_Zone@@@C1B1],[ebsSize@@@dg_header_Size__GB_@@@C2T1],[storageVolumeTypeName@@@dg_header_Volume_Type@@@C2B1],[instanceNickName@@@dg_header_Instance_Attached_To@@@C2B2],[status@@@dg_header_Status@@@C2M1],[snapshotID@@@dg_header_Source_Snapshot_ID@@@C3B1],[EBSCreatedDate@@@dg_header_Created_at@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-openstack-datastore-hdr.xhtml"
+            },
+            "DATASTORE_AZURE": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "volumeID@@@dg_header_Disk_Name,imageId@@@dg_header_Notes_Azure_Storage,notes@@@dg_header_Type,ebsSize@@@dg_header_Size__GB_,instanceNickName@@@dg_header_Instance_Attached_To,status@@@dg_header_Status,EBSCreatedDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,EBSVolumeDetailsID@@@dg_header_EBSVolumeDetailsID,storageVolumeTypeName@@@dg_header_Host_Cache",
+                "SearchableColumns": "[volumeID@@@dg_header_Disk_Name@@@text],[imageId@@@dg_header_Notes_Azure_Storage@@@text],[notes@@@dg_header_Type@@@text],[ebsSize@@@dg_header_Size__GB_@@@number],[instanceNickName@@@dg_header_Instance_Attached_To@@@text],[status@@@dg_header_Status@@@text],[storageVolumeTypeName@@@dg_header_Host_Cache@@@text],[EBSCreatedDate@@@dg_header_Created_at@@@text]",
+                "PDFXLSColumns": "[volumeID@@@dg_header_Disk_Name@@@C1T1],[ebsSize@@@dg_header_Size__GB_@@@C2T1],[notes@@@dg_header_Type@@@C2B1],[instanceNickName@@@dg_header_Instance_Attached_To@@@C2B2],[imageId@@@dg_header_Notes_Azure_Storage@@@C3T1],[storageVolumeTypeName@@@dg_header_Host_Cache@@@C3B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-azure-storage-hdr.xhtml"
+            }
+        }
+    },
+    
+    "AzureSelectStorage": {
+        "PageName": "Select Storage",
+        "MenuName": "Select Storage",
+        "HelpFilePath": "",
+        "Entities": {
+            "AZURE_SELECT_STORAGE": {
+                "DataGridColumns": "storageName@@@dg_header_Storage_Account,containerName@@@dg_header_Container,fileName@@@dg_header_Blob,fileID@@@dg_header_Blob,size@@@dg_header_Size__GB_",
+                "SearchableColumns": "[storageName@@@dg_header_Storage_Account@@@text],[containerName@@@dg_header_Container@@@text],[fileName@@@dg_header_Blob@@@text],[size@@@dg_header_Size__GB_@@@text]",
+                "PDFXLSColumns": "[storageName@@@dg_header_Storage_Account@@@text],[containerName@@@dg_header_Container@@@text],[fileName@@@dg_header_Blob@@@text],[size@@@dg_header_Size__GB_@@@text]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-azure-select-storage-hdr.xhtml"
+            }
+        }
+    },
+    
+    "CreateNetAppStorage": {
+        "PageName": "Storage - Create New",
+        "MenuName": "Storage",
+        "HelpFilePath": "/Provisioning/Creating Storage.htm",
+        "Entities": {}
+    },
+     "AddImages": {
+        "PageName": "Image - Add new",
+        "MenuName": "Images",
+        "HelpFilePath": "/Provisioning/Provisioning Images.htm",
+        "Entities": {
+            "ADD_IMAGE": {
+                "DataGridColumns": "imageName@@@azure_image_name_offer_sku,osName@@@dg_header_OS,imageDetails@@@azure_crtinst_ami_hdr2",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-add-image.xhtml"
+            }
+        }
+    },
+    "ListDiskLunForDatastore": {
+        "PageName": "Storage - Create New",
+        "MenuName": "Storage",
+        "HelpFilePath": "/Provisioning/Provisioning Storage.htm",
+        "Entities": {
+            "DISK_LUNS_DATASTORE": {
+                "DataGridColumns": "diskDisplayName@@@dg_header_Name,diskCanonicalName@@@dg_header_Identifier,diskDevicePath@@@dg_header_PathID,diskDeviceName@@@dg_header_LUN,capacity@@@dg_header_Capacity_GB_",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-vmware-create-datastore-hdr.xhtml"
+            }
+        }
+    },
+    "CreateEBSVolumes": {
+        "PageName": "Storage - Create Volume",
+        "MenuName": "create volume",
+        "HelpFilePath": "/Provisioning/Creating Storage.htm",
+        "Entities": {}
+    },
+    "ChangeAssignee": {
+        "PageName": "Change Assignee",
+        "MenuName": "Change Assignee",
+        "HelpFilePath": "/Provisioning/Changing Assignee of a Compute Instance.htm",
+        "Entities": {
+            "USER": {
+                "DataGridColumns": "firstName@@@dg_header_First_Name,lastName@@@dg_header_Last_Name,userName@@@dg_header_Username,authRealmType@@@dg_header_Authentication_Type,userGroups@@@dg_header_User_Groups,emailID@@@dg_header_Email,mobileNumber@@@dg_header_Contact_Number",
+                "SearchableColumns": "[firstName@@@dg_header_First_Name@@@text],[lastName@@@dg_header_Last_Name@@@text],[userName@@@dg_header_Username@@@text],[userGroups@@@dg_header_User_Groups@@@text],[emailID@@@dg_header_Email@@@text],[mobileNumber@@@dg_header_Contact_Number@@@number],[authRealmType@@@dg_header_Authentication_Type@@@text]",
+                "PDFXLSColumns": "[firstName@@@dg_header_First_Name@@@C1T2],[lastName@@@dg_header_Last_Name@@@C1T1],[userName@@@dg_header_Username@@@C1B1],[authRealmType@@@dg_header_Authentication@@@C1B2],[userGroups@@@dg_header_User_Group_s_@@@C2T1],[emailID@@@dg_header_Email@@@C3T1],[mobileNumber@@@dg_header_Contact_Number@@@C3B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-user.xhtml"
+            }
+        }
+    },
+    "ObjectStorage": {
+        "PageName": "Object Storage",
+        "MenuName": "Object Storage",
+        "HelpFilePath": "/Provisioning/Provisioning Object Storage.htm",
+        "Entities": {
+            "S3BUCKET": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "bucketName@@@dg_header_S3_Bucket,datacenterDisplayName@@@dg_header_Region,createdDate@@@dg_header_Created_At@@@date",
+                "SearchableColumns": "[bucketName@@@dg_header_S3_Bucket@@@text],[datacenterDisplayName@@@dg_header_Region@@@text]",
+                "PDFXLSColumns": "[bucketName@@@dg_header_S3_Bucket@@@C1T1],[datacenterDisplayName@@@dg_header_Region@@@C2T1],[createdDate@@@dg_header_Created_At@@@C3T1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-s3buckets.xhtml"
+            },
+            "AZURE_OBJECT_STORAGE": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "name@@@dg_header_Storage_Account,serviceLocation@@@dg_header_Location,serviceStatus@@@dg_header_Status,type@@@dg_header_Type,monitoringTemplateName@@@dg_header_Monitoring_Profile,serviceSubLocation@@@dg_header_Secondary_Region,createdAt@@@dg_header_Created_At@@@date,severity@@@dg_header_Severity,monitoringStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[name@@@dg_header_Storage_Account@@@text],[serviceLocation@@@dg_header_Location@@@text],[serviceStatus@@@dg_header_Status@@@text],[type@@@dg_header_Type@@@text],[serviceSubLocation@@@dg_header_Secondary_Region@@@text],[createdAt@@@dg_header_Created_At@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Storage_Account@@@C1T1],[serviceLocation@@@dg_header_Location@@@C2T1],[type@@@dg_header_Type@@@C1B1],[serviceSubLocation@@@dg_header_Secondary_Region@@@C2B1,monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],createdAt@@@dg_header_Created_At@@@C3T1@@@date],[severity@@@dg_header_Severity@@@C1M1],[monitoringStatus@@@dg_header_Monitoring_Profile_State@@@C2M2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-azure-storage-account-hdr.xhtml"
+            }
+        }
+    },
+     "AzureStorageContainer": {
+        "PageName": "Storage Container",
+        "MenuName": "Object Storage",
+        "HelpFilePath": "",
+        "Entities": {
+            "AZURE_STORAGE_CONTAINER": {
+                "DataGridColumns": "containerName@@@dg_header_Container_Name,modifiedDate@@@dg_header_Last_Modified@@@date,url@@@dg_header_URL",
+                "SearchableColumns": "[containerName@@@dg_header_Container_Name@@@text],[modifiedDate@@@dg_header_Last_Modified@@@text],[url@@@dg_header_URL@@@text]",
+                "PDFXLSColumns": "[containerName@@@dg_header_Container_Name@@@C1T1],[modifiedDate@@@dg_header_Last_Modified@@@C2T1],[url@@@dg_header_URL@@@C3T1]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-azure-storage-container-hdr.xhtml"
+            }
+        }
+    },
+    "AzureStorageBlobs": {
+        "PageName": "Storage Blob",
+        "MenuName": "Object Storage",
+        "HelpFilePath": "",
+        "Entities": {
+            "AZURE_STORAGE_BLOBS": {
+                "DataGridColumns": "fileName@@@dg_header_Blob_Name,modifiedDate@@@dg_header_Last_Modified@@@date,url@@@dg_header_Location_URL,size@@@dg_header_Size__GB_",
+                "SearchableColumns": "[fileName@@@dg_header_Blob_Name@@@text],[modifiedDate@@@dg_header_Last_Modified@@@text],[url@@@dg_header_Location_URL@@@text],[size@@@dg_header_Size__GB_@@@text]",
+                "PDFXLSColumns": "[fileName@@@dg_header_Blob_Name@@@C1T1],[modifiedDate@@@dg_header_Last_Modified@@@C2B1],[url@@@dg_header_Location_URL@@@C3T1],[size@@@dg_header_Size__GB_@@@C2T1]",
+                "SelectionMode": "single",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-azure-storage-blobs-hdr.xhtml"
+            }
+        }
+    },
+ 	"ListDataBaseServices": {
+        "PageName": "Database Services",
+        "MenuName": "Database Services",
+        "HelpFilePath": "/Provisioning/Provisioning Database Services.htm",
+        "Entities": {
+            "DATABASE_SERVICES_AWS": {
+           		"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "dbServiceName@@@dg_header_DB_Instance_Name,datacenterName@@@dg_header_Region,dbServiceClass@@@dg_header_Class,sizeWithUnits@@@dg_header_Size,status@@@dg_header_Status,engine@@@dg_header_Engine,multiAZ@@@dg_header_Multi-AZ,severity@@@dg_header_Severity,vpcId@@@dg_header_VPC_ID,iops@@@dg_header_IOPS,monitoringTemplateName@@@dg_header_Monitoring_Profile,monitoringStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[dbServiceName@@@dg_header_Name@@@text],[datacenterName@@@dg_header_Region@@@text],[dbServiceClass@@@dg_header_Class@@@text],[sizeWithUnits@@@dg_header_Size@@@number],[status@@@dg_header_Status@@@text],[engine@@@dg_header_Engine@@@text],[multiAZ@@@dg_header_Multi-AZ@@@text],[iops@@@dg_header_IOPS@@@number],[vpcId@@@dg_header_VPC_ID@@@text],[severity@@@dg_header_Severity@@@text]",
+                "PDFXLSColumns": "[dbServiceName@@@dg_header_DB_Instance_Name@@@C1T1],[datacenterName@@@dg_header_Region@@@C1B1],[dbServiceClass@@@dg_header_Class@@@C1B2],[severity@@@dg_header_Severity@@@C1M1],[sizeWithUnits@@@dg_header_Size@@@C2T1],[status@@@dg_header_Status@@@C2B1],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[vpcId@@@dg_header_VPC_ID@@@C2B3],[engine@@@dg_header_Engine@@@C3T1],[iops@@@dg_header_IOPS@@@C3B1],[multiAZ@@@dg_header_Multi-AZ@@@C3B2],[monitoringStatus@@@dg_header_Monitoring_Profile_State@@@C2M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-database-services-hdr.xhtml"
+            },
+	       	 "DATABASE_SERVICES_AZURE": {
+	       	    "ApplicableProviders" : "AZURE",
+	            "DataGridColumns": "dbServiceName@@@dg_header_Name,size@@@dg_header_Size,status@@@dg_header_Status,server@@@dg_header_Server,collationName@@@dg_header_CollationName,monitoringTemplateName@@@dg_header_Monitoring_Profile,severity@@@dg_header_Severity,datacenterName@@@dg_header_Location,monitoringStatus@@@dg_header_Monitoring_Profile_State,azureLoginStatus@@@dg_header_Instance_Login_Status",
+	            "SearchableColumns": "[dbServiceName@@@dg_header_Name@@@text],[server@@@dg_header_Server@@@text],[size@@@dg_header_Size@@@number],[status@@@dg_header_Status@@@text],[collationName@@@dg_header_CollationName@@@text],[datacenterName@@@dg_header_Location@@@text],[severity@@@dg_header_Severity@@@text]",
+	            "PDFXLSColumns": "[dbServiceName@@@dg_header_Name@@@C1T1],[datacenterName@@@dg_header_Location@@@C1B1],[severity@@@dg_header_Severity@@@C1M1],[size@@@dg_header_Size@@@C2T1],[status@@@dg_header_Status@@@C2B1],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[server@@@dg_header_Server@@@C3T1],[collationName@@@dg_header_CollationName@@@C3B1],[monitoringStatus@@@dg_header_Monitoring_Profile_State@@@C2M1],[azureLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1]",
+	            "SelectionMode": "multi",
+	            "ColumnsIncludeFile": "dt-database-services-azure-hdr.xhtml"
+	        }            
+        }
+    },
+    "ListDataBaseSnapshots": {
+        "PageName": "Database Snapshots",
+        "MenuName": "Database Snapshots",
+        "HelpFilePath": "/Provisioning/Provisioning Database Snapshots.htm",
+        "Entities": {
+            "DATABASESNAPSHOTS": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "dbSnapshotIdentifier@@@dg_header_Snaphot_Name,datacenterName@@@dg_header_Region,dbInstanceIdentifier@@@dg_header_DB_Instance_Name,allocatedStorageWithUnits@@@dg_header_Size,status@@@dg_header_Status,engine@@@dg_header_Engine,createdAt@@@dg_header_Created_At@@@date,vpcId@@@dg_header_VPC_ID,snapshotType@@@dg_header_Snapshot_Type",
+                "SearchableColumns": "[dbSnapshotIdentifier@@@dg_header_Snaphot_Name@@@text],[dbInstanceIdentifier@@@dg_header_DB_Instance_Name@@@text],[allocatedStorageWithUnits@@@dg_header_Size__GB_@@@number],[status@@@dg_header_Status@@@text],[vpcId@@@dg_header_VPC_ID@@@text],[engine@@@dg_header_Engine@@@text],[createdAt@@@dg_header_Created_At@@@text],[datacenterName@@@dg_header_Region@@@text],[snapshotType@@@dg_header_Snapshot_Type@@@text]",
+                "PDFXLSColumns": "[dbSnapshotIdentifier@@@dg_header_Snaphot_Name@@@C1T1],[datacenterName@@@dg_header_Region@@@C1B1],[dbInstanceIdentifier@@@dg_header_DB_Instance_Name@@@C1B2],[allocatedStorageWithUnits@@@dg_header_Size@@@C2T1],[snapshotType@@@dg_header_Snapshot_Type@@@C2B1],[vpcId@@@dg_header_VPC_ID@@@C2B2],[engine@@@dg_header_Engine@@@C3T1],[createdAt@@@dg_header_Created_At@@@C3B1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-database-snapshots-hdr.xhtml"
+            }
+        }
+    },
+    "ListAzureDatastores": {
+        "PageName": "Object Storage",
+        "MenuName": "Object Storage",
+        "HelpFilePath": "/Provisioning/Provisioning Object Storage.htm",
+        "Entities": {
+            "AZURE_DATASTORES": {
+                "DataGridColumns": "fileName@@@dg_header_Name,size@@@dg_header_Size,modifiedDate@@@dg_header_Last_Modified@@@date",
+                "SearchableColumns": "[fileName@@@dg_header_Name@@@text],[size@@@dg_header_Size@@@text],[modifiedDate@@@dg_header_Last_Modified@@@text]",
+                "PDFXLSColumns": "[fileName@@@dg_header_Name@@@C1T1],[size@@@dg_header_Size@@@C2T1],[modifiedDate@@@dg_header_Last_Modified@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-azure-datastore-hdr.xhtml"
+            }
+        }
+    },
+    "S3BucketExpirationRules": {
+        "PageName": "S3 Bucket - Expiration Rules",
+        "MenuName": "s3bucket expirationrules",
+        "HelpFilePath": "/Provisioning/Working with Expiration Rules of Storage Buckets.htm",
+        "Entities": {
+            "S3BUCKET_EXPIRATION_RULES": {
+                "DataGridColumns": "ruleID@@@dg_header_Rule_Name,prefix@@@dg_header_Prefix,expirationInDays@@@dg_header_Expires_After__days_",
+                "SearchableColumns": "[ruleID@@@dg_header_Rule_Name@@@text],[prefix@@@dg_header_Prefix@@@text],[expirationInDays@@@dg_header_Expires_After__days_@@@number]",
+                "PDFXLSColumns": "[ruleID@@@dg_header_Rule_Name@@@C1T1],[prefix@@@dg_header_Prefix@@@C2T1],[expirationInDays@@@dg_header_Expires_After__days_@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-s3buckets-expiration-rules.xhtml"
+            }
+        }
+    },
+    "Network": {
+        "PageName": "IP Addresses",
+        "MenuName": "IP Addresses",
+        "HelpFilePath": "/Provisioning/Provisioning IP Addresses.htm",
+        "Entities": {
+            "ELASTIC_IP_AWS": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "elasticIP@@@dg_header_Elastic_IP_Address,instanceNickName@@@dg_header_Instance,instanceName@@@dg_header_Name_in_Provider,datacenterDisplayName@@@dg_header_Region_Name,networkInterfaceID@@@dg_header_Network_Interface,vpcAddress@@@dg_header_Vpc_Address",
+                "SearchableColumns": "[elasticIP@@@dg_header_Elastic_IP_Address@@@text],[instanceNickName@@@dg_header_Instance@@@text],[instanceName@@@dg_header_Name_in_Provider@@@text],[datacenterDisplayName@@@dg_header_Region_Name@@@text],[networkInterfaceID@@@dg_header_Network_Interface@@@text]",
+                "PDFXLSColumns": "[elasticIP@@@dg_header_Elastic_IP_Address@@@C1T1],[instanceNickName@@@dg_header_Instance@@@C2T1],[instanceName@@@dg_header_Name_in_Provider@@@C2B1],[datacenterDisplayName@@@dg_header_Region_Name@@@C3T1],[networkInterfaceID@@@dg_header_Network_Interface@@@C3B1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-elasticIP.xhtml"
+            },
+             "ELASTIC_IP_AZURE": {
+              	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "elasticIP@@@dg_header_Public_IP_Address,resourceGroupName@@@dg_header_Resource_Group_Name,instanceNickName@@@dg_header_Instance,instanceName@@@dg_header_Name_in_Provider,datacenterDisplayName@@@dg_header_Region_Name,networkInterfaceID@@@dg_header_Network_Interface,vpcAddress@@@dg_header_Vpc_Address",
+                "SearchableColumns": "[elasticIP@@@dg_header_Elastic_IP_Address@@@text],[resourceGroupName@@@dg_header_Resource_Group_Name@@@text],[instanceNickName@@@dg_header_Instance@@@text],[instanceName@@@dg_header_Name_in_Provider@@@text],[datacenterDisplayName@@@dg_header_Region_Name@@@text],[networkInterfaceID@@@dg_header_Network_Interface@@@text]",
+                "PDFXLSColumns": "[elasticIP@@@dg_header_Elastic_IP_Address@@@C1T1],[resourceGroupName@@@dg_header_Resource_Group_Name@@@C1T2],[instanceNickName@@@dg_header_Instance@@@C2T1],[instanceName@@@dg_header_Name_in_Provider@@@C2B1],[datacenterDisplayName@@@dg_header_Region_Name@@@C3T1],[networkInterfaceID@@@dg_header_Network_Interface@@@C3B1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-elasticIP-azure.xhtml"
+            }
+        }    
+    },
+    "Snapshot": {
+        "PageName": "Compute Snapshots",
+        "MenuName": "Compute Snapshots",
+        "HelpFilePath": "/Provisioning/Provisioning Compute Snapshots.htm",
+        "Entities": {
+            "SNAPSHOT": {
+                "DataGridColumns": "nickName@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,instanceTemplateName@@@dg_header_Compute_Profile,status@@@dg_header_Status,templateRevision@@@dg_header_Compute_Profile,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,userFirstName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,userGroupName@@@dg_header_User_Group,lastBootTime@@@dg_header_Launch_Time@@@date,instanceName@@@dg_header_Name_in_Provider,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,montoringProfileState@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[lastBootTime@@@dg_header_Launch_Time@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[userGroupName@@@dg_header_User_Group@@@text],[instanceName@@@dg_header_Name_in_Provider@@@text]",
+                "PDFXLSColumns": "[osName@@@dg_header_OS@@@C0M1],[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[state@@@dg_header_State@@@C1M1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2T1],[displayIPs@@@dg_header_IP_Address@@@C2B1],[lastBootTime@@@dg_header_Launch_Time@@@C2B2@@@date],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M2],[severity@@@dg_header_Severity@@@C2M1],[userFirstName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[instanceName@@@dg_header_Name_in_Provider@@@C3B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-snapshot-hdr.xhtml"
+            }
+        }
+    },
+    "ListEBSSnapshot": {
+        "PageName": "Storage Snapshots",
+        "MenuName": "Storage Snapshots",
+        "HelpFilePath": "/Provisioning/Provisioning Storage Snapshots.htm",
+        "Entities": {
+            "EBSSNAPSHOT": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "snapshotId@@@dg_header_Snapshot_ID_,volumeId@@@dg_header_Volume_ID,snapSizeWithUnit@@@dg_header_Volume_Size,snapSize@@@dg_header_Volume_Size,datacenterDisplayName@@@dg_header_Region,Zone@@@dg_header_Availability_Zone,tags@@@dg_header_Tags,status@@@dg_header_Status,createdDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,owner@@@dg_header_Owner,ebsSnapshotDetailsID@@@dg_header_EBS_SnapshotDtlsId,complianceList@@@dg_header_complianceList,complianceState@@@dg_header_ComplianceState,tags@@@dg_header_Tags,Encrypted@@@dg_header_Encrypt",
+                "SearchableColumns": "[snapshotId@@@dg_header_Snapshot_ID_@@@text],[volumeId@@@dg_header_Volume_ID@@@text],[datacenterDisplayName@@@dg_header_Region@@@text],[Zone@@@dg_header_Availability_Zone@@@text],[status@@@dg_header_Status@@@text],[owner@@@dg_header_Owner@@@text],[snapshotType@@@dg_header_Snapshot_Type@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all],[Encrypted@@@dg_header_Encrypt@@@text],[snapSize@@@dg_header_Volume_Size@@@number]",
+                "PDFXLSColumns": "[snapshotId@@@dg_header_Snapshot_ID_@@@C1T1],[snapSize@@@dg_header_Volume_Size@@@C2T1],[owner@@@dg_header_Owner@@@C2B1],[volumeId@@@dg_header_Volume_ID@@@C2B2],[datacenterDisplayName@@@dg_header_Region@@@C3T1],[createdDate@@@dg_header_Created_at@@@C3B1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-ebs-snapshot.xhtml"
+            },
+            "OPENSTACKSTORAGESNAPSHOT": {
+            	"ApplicableProviders" : "OPENSTACK",
+                "DataGridColumns": "snapshotName@@@dg_header_Snaphot_Name,volumeName@@@dg_header_Volume_Name,size@@@dg_header_Size__GB_,snapSize@@@dg_header_Size__GB_,datacenterName@@@dg_header_project,Zone@@@dg_header_Availability_Zone,tags@@@dg_header_Tags,status@@@dg_header_Status,createdDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,owner@@@dg_header_Owner,ebsSnapshotDetailsID@@@dg_header_EBS_SnapshotDtlsId,complianceList@@@dg_header_complianceList,complianceState@@@dg_header_ComplianceState",
+                "SearchableColumns": "[snapshotName@@@dg_header_Snaphot_Name@@@text],[volumeName@@@dg_header_Volume_Name@@@text],[datacenterDisplayName@@@dg_header_project@@@text],[Zone@@@dg_header_Availability_Zone@@@text],[status@@@dg_header_Status@@@text],[owner@@@dg_header_Owner@@@text],[snapshotType@@@dg_header_Snapshot_Type@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all]",
+                "PDFXLSColumns": "[snapshotName@@@dg_header_Snaphot_Name@@@C1T1],[size@@@dg_header_Size__GB_@@@C2T1],[status@@@dg_header_Status],[status@@@dg_header_Status@@@C1M1],[volumeName@@@dg_header_Volume_Name@@@C2B1],[datacenterName@@@dg_header_project@@@C3T1],[createdDate@@@dg_header_Created_at@@@C3B1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-storage-snapshots-openstack-hdr.xhtml"
+            }
+        }
+    },
+    "ServiceProfile": {
+        "PageName": "Compute Profiles",
+        "MenuName": "Compute Profiles",
+        "HelpFilePath": "/Automation/Working with Compute Profiles.htm",
+        "Entities": {
+            "INSTANCE_SERVICEPROFILE": {
+                "DataGridColumns": "instanceTemplateName@@@dg_header_Compute_Profile,instanceTemplateDesc@@@dg_header_Description,deploymentName@@@dg_header_Deployment,groupName@@@dg_header_Instance_Group,estimatedVMCost@@@dg_header_Cost_Per_Hour,estimatedVMCostUnit@@@dg_header_Cost_Per_Hour,computeProfileMasterName@@@dg_header_compute_profile_master_name,creationTime@@@dg_header_Created_At@@@date,revisionNumber@@@dg_header_Version,activeFlag@@@dg_header_Active_Flag,createdByUserName@@@dg_header_Created_By",
+                "SearchableColumns": "[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[deploymentName@@@dg_header_Deployment@@@text],[groupName@@@dg_header_Instance_Group@@@text],[instanceTemplateDesc@@@dg_header_Description@@@text],[estimatedVMCost@@@dg_header_Cost_Per_Hour@@@number],[computeProfileMasterName@@@dg_header_compute_profile_master_name@@@text],[createdByUserName@@@dg_header_Created_By@@@text],[revisionNumberString@@@dg_header_Version@@@text]",
+                "PDFXLSColumns": "[instanceTemplateName@@@dg_header_Compute_Profile@@@C1T1],[instanceTemplateDesc@@@dg_header_Description@@@C1B1],[deploymentName@@@dg_header_Deployment@@@C2T1],[groupName@@@dg_header_Instance_Group@@@C2T2],[estimatedVMCost@@@dg_header_Cost_Per_HourUSD@@@C2B1],[computeProfileMasterName@@@dg_header_compute_profile_master_name@@@C2B2],[createdByUserName@@@dg_header_Created_By@@@C3T1],[creationTime@@@dg_header_Created_At@@@C3B1@@@date],[revisionNumber@@@dg_header_Version@@@C3B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-serviceProfiles.xhtml"
+            }
+        }
+    },
+    "ProvisioningWorkflow": {
+        "PageName": "Application Profiles",
+        "MenuName": "Application Profiles",
+        "HelpFilePath": "/Automation/Working with Application Profiles.htm",
+        "Entities": {
+            "PROVISIONING_WORKFLOW": {
+                "DataGridColumns": "scalingPolicyName@@@dg_header_Application_Profile,deploymentMasterName@@@dg_header_Deployment,description@@@dg_header_Tags,notificationName@@@dg_header_Notification_Template,updatedDate@@@dg_header_Created_At@@@date,operation@@@dg_header_Version,createdByUserName@@@dg_header_Assignee,totalCost@@@dg_header_Cost_Per_Hour,applicationIconIndex@@@dg_header_ApplicationIcon,totalCostUnit@@@dg_header_Cost_Unit",
+                "SearchableColumns": "[scalingPolicyName@@@dg_header_Application_Profile@@@text],[deploymentMasterName@@@dg_header_Deployment@@@text],[description@@@dg_header_Tags@@@text],[notificationName@@@dg_header_Notification_Template@@@text],[createdByUserName@@@dg_header_Assignee@@@text],[totalCost@@@dg_header_Cost_Per_Hour@@@number],[operation@@@dg_header_Version@@@text],[updatedDate@@@dg_header_Created_At@@@text]",
+                "PDFXLSColumns": "[scalingPolicyName@@@dg_header_Application_Profile@@@C1T1],[deploymentMasterName@@@dg_header_Deployment@@@C1B1],[createdByUserName@@@dg_header_Assignee@@@C2T1],[operation@@@dg_header_Version@@@C2B1],[updatedDate@@@dg_header_Created_At@@@C2B2@@@date],[totalCost@@@dg_header_Cost_Per_HourUSD@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-app-profile.xhtml"
+            }
+        }
+    },
+    "ListApplicationProfile": {
+        "PageName": "Application Profiles",
+        "MenuName": "Application Profiles",
+        "HelpFilePath": "/Automation/Working with Application Profiles.htm",
+        "Entities": {
+            "APPLICATION_PROFILE": {
+                "DataGridColumns": "appProfileName@@@dg_header_Application_Profile,deploymentMasterName@@@dg_header_Deployment,description@@@dg_header_Tags,notificationName@@@dg_header_Notification_Template,updatedDate@@@dg_header_Created_At@@@date,operation@@@dg_header_Version,createdByUserName@@@dg_header_Assignee,totalCost@@@dg_header_Cost_Per_Hour,applicationIconIndex@@@dg_header_ApplicationIcon,totalCostUnit@@@dg_header_Cost_Unit",
+                "SearchableColumns": "[appProfileName@@@dg_header_Application_Profile@@@text],[deploymentMasterName@@@dg_header_Deployment@@@text],[description@@@dg_header_Tags@@@text],[notificationName@@@dg_header_Notification_Template@@@text],[createdByUserName@@@dg_header_Assignee@@@text],[totalCost@@@dg_header_Cost_Per_Hour@@@number],[operation@@@dg_header_Version@@@text],[createdDate@@@dg_header_Created_At@@@text]",
+                "PDFXLSColumns": "[appProfileName@@@dg_header_Application_Profile@@@C1T1],[deploymentMasterName@@@dg_header_Deployment@@@C1B1],[createdByUserName@@@dg_header_Assignee@@@C2T1],[operation@@@dg_header_Version@@@C2B1],[updatedDate@@@dg_header_Created_At@@@C2B2@@@date],[totalCost@@@dg_header_Cost_Per_HourUSD@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-application-profile.xhtml"
+            }
+        }
+    },
+    "CreateApplicationProfile": {
+        "PageName": "Application Profiles - Create",
+        "MenuName": "Application Profiles",
+        "HelpFilePath": "/Automation/Creating Application Profiles.htm"
+    },
+    "EditApplicationProfile": {
+        "PageName": "Application Profiles - Modify",
+        "MenuName": "Application Profiles",
+        "HelpFilePath": "/Automation/Editing Application Profiles.htm"
+    },
+    "ListUsagePolicy": {
+        "PageName": "Provisioning Policies",
+        "MenuName": "Provisioning Policies",
+        "HelpFilePath": "/Automation/Working with Provisioning Policies.htm"
+    },
+    "ListAutomationPolicy": {
+        "PageName": "Automation Policies",
+        "MenuName": "Automation Policies",
+        "HelpFilePath": "/Automation/Working with Automation Policies.htm"
+    },
+    "Application": {
+        "PageName": "Applications",
+        "MenuName": "Applications",
+        "HelpFilePath": "/Provisioning/Provisioning Application Instances.htm"
+    },
+    "CreateApplication": {
+        "PageName": "Create New Application Instance",
+        "MenuName": "Applications",
+        "HelpFilePath": "/Provisioning/Provisioning Application Instances.htm"
+    },
+    "ListApplication": {
+        "PageName": "Applications",
+        "MenuName": "Applications",
+        "HelpFilePath": "/Provisioning/Provisioning Application Instances.htm",
+        "ApplicableView" :"APP_VIEW",
+        "Entities": {
+            "APPLICATIONS": {
+                "DataGridColumns": "applicationCopyName@@@dg_header_Name,availability@@@dg_header_Availability,tags@@@dg_header_Tags,userName@@@dg_header_Assignee,usrGrpName@@@dg_header_User_Group,deployment@@@dg_header_Deployment,state@@@dg_header_Health,appAvailabilityState@@@dg_header_Availability_State,costPerHour@@@dg_header_Cost_Per_Hour,costThisMonth@@@dg_header_Cost_till_date_this_month,updatedDate@@@dg_header_Last_Operated_At@@@date,costUnits@@@dg_header_Cost_Units,applicationProfileName@@@dg_header_Application_Profile,applicationIconIndex@@@dg_header_Application_Icon",
+                "SearchableColumns": "[applicationCopyName@@@dg_header_Name@@@text],[userName@@@dg_header_Assignee@@@text],[usrGrpName@@@dg_header_User_Group@@@text],[deployment@@@dg_header_Location@@@text],[costPerHour@@@dg_header_Cost_Per_Hour@@@text],[updatedDate@@@dg_header_Last_Operated_At@@@text],[applicationProfileName@@@dg_header_Application_Profile@@@text]",
+                "PDFXLSColumns": "[applicationCopyName@@@dg_header_Name@@@C1T1],[deployment@@@dg_header_Deployment@@@C1B1],[appAvailabilityState@@@dg_header_Availability_State@@@C1M2],[state@@@dg_header_Health@@@C1M1],[userName@@@dg_header_Assignee@@@C2T1],[usrGrpName@@@dg_header_User_Group@@@C2T2],[applicationProfileName@@@dg_header_Application_Profile@@@C2B1],[updatedDate@@@dg_header_Last_Operated_At@@@C2B2@@@date],[costPerHour@@@dg_header_Cost_Per_HourUSD@@@C3T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-applications.xhtml"
+            }
+        }
+    },
+    "ListApplicationAvailability": {
+        "PageName": "Applications",
+        "MenuName": "Applications",
+        "HelpFilePath": "/Provisioning/Provisioning Application Instances.htm",
+        "Entities": {
+            "APPLICATIONAVAILABILITY": {
+                "DataGridColumns": "state@@@dg_header_State,reason@@@dg_header_Reason,createdDate@@@dg_header_Timestamp@@@date",
+                "SearchableColumns": "[state@@@dg_header_State@@@text],[reason@@@dg_header_Reason@@@text],[createdDate@@@dg_header_Timestamp@@@date]",
+                "PDFXLSColumns": "[state@@@dg_header_State@@@C1T1],[reason@@@dg_header_Reason@@@C1B1],[createdDate@@@dg_header_Timestamp@@@date]",
+                "SelectionMode": "none",
+                "ColumnsIncludeFile": "dt-application-availability.xhtml"
+            }
+        }
+    },
+    "ListCloudServices": {
+        "PageName": "Cloud Services",
+        "MenuName": "Applications",
+        "HelpFilePath": "",
+        "Entities": {
+            "CLOUD_SERVICES": {
+                "DataGridColumns": "name@@@dg_header_Name,serviceStatus@@@dg_header_State,serviceDeploymentSlot@@@dg_header_Location,severity@@@dg_header_Health,serviceDeploymentUrl@@@dg_header_URL,subscriptionId@@@dg_header_Subscription",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[serviceStatus@@@dg_header_State@@@text],[serviceDeploymentSlot@@@dg_header_Location@@@text],[severity@@@dg_header_Health@@@text],[serviceDeploymentUrl@@@dg_header_URL@@@text],[subscriptionId@@@dg_header_Subscription@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[serviceStatus@@@dg_header_State@@@C1B1],[serviceDeploymentSlot@@@dg_header_Location@@@C2T1],[severity@@@dg_header_Health@@@C1M1],[serviceDeploymentUrl@@@dg_header_URL@@@C3T1],[subscriptionId@@@dg_header_Subscription@@@C3B1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-cloudservices.xhtml"
+            }
+        }
+    },
+    "ListIntelligentPolicy": {
+        "PageName": "Placement Policies",
+        "MenuName": "Placement Policies",
+        "HelpFilePath": "/Automation/Working with Placement Policies.htm",
+        "Entities": {
+            "INTELLIGENT_PLACEMENT": {
+                "ApplicableProviders" : "AMAZON,VMWARE",
+                "DataGridColumns": "policyName@@@dg_header_Name,policyDescription@@@dg_header_Description,settings@@@dg_header_Settings,policyStatus@@@dg_header_Policy_Status",
+                "SearchableColumns": "[policyName@@@dg_header_Name@@@text],[policyDescription@@@dg_header_Description@@@text],[settings@@@dg_header_Settings@@@text]",
+                "PDFXLSColumns": "[policyName@@@dg_header_Name@@@C1T1],[policyDescription@@@dg_header_Description@@@C2B1],[settings@@@dg_header_Settings@@@C3T1],[policyStatus@@@dg_header_Policy_Status@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-intel-policy.xhtml"
+            }
+        }
+    },
+    "ListEvent": {
+        "PageName": "Events",
+        "MenuName": "Events",
+        "HelpFilePath": "/Monitoring/Viewing Events.htm",
+        "Entities": {
+            "EVENT": {
+                "DataGridColumns": "monitoredEntityName@@@dg_header_Entity,deploymentName@@@dg_header_Deployment,templateName@@@dg_header_Monitoring_Profile,groupName@@@dg_header_Instance_Group,osShortName@@@dg_header_OS,deviceTypeDisplay@@@dg_header_Service,deviceAttributeDisplay@@@dg_header_Attribute,deviceNameDisplay@@@dg_header_Source,details@@@dg_header_Event_Details,eventID@@@dg_header_Event_ID,ticketState@@@dg_header_Event_Forward_Status,eventTimeDuration@@@dg_header_Generated_at,respondedTime@@@dg_header_Responded_at@@@date,resolvedTime@@@dg_header_Resolved_at@@@date,state@@@dg_header_State,monitoredEntityState@@@dg_header_Instance_State,device@@@dg_header_Device,status@@@dg_header_Status,resolution@@@dg_header_Event_Status,agentState@@@dg_header_Agent_State,montoringProfileState@@@dg_header_Monitoring_Profile_State,responseState@@@dg_header_Event_Response_State",
+                "SearchableColumns": "[monitoredEntityName@@@dg_header_Entity@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[templateName@@@dg_header_Monitoring_Profile@@@text],[deviceTypeDisplay@@@dg_header_Service@@@text],[deviceNameDisplay@@@dg_header_Source@@@text],[eventID@@@dg_header_Event_ID@@@number],[deviceAttributeDisplay@@@dg_header_Attribute@@@text],[details@@@dg_header_Event_Details@@@text],[details@@@dg_header_Event_Status@@@text],[responseState@@@dg_header_Event_Response_State@@@text]",
+                "PDFXLSColumns": "[monitoredEntityName@@@dg_header_Entity@@@C1T1],[templateName@@@dg_header_Monitoring_Profile@@@C1T2],[deploymentName@@@dg_header_Deployment@@@C1B1],[groupName@@@dg_header_Instance_Group@@@C1B2],[monitoredEntityState@@@dg_header_Instance_State@@@C1M2],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C1M1],[deviceTypeDisplay@@@dg_header_Service@@@C2T1],[deviceAttributeDisplay@@@dg_header_Attribute@@@C2T2],[deviceNameDisplay@@@dg_header_Source@@@C2B1],[details@@@dg_header_Event_Details@@@C2B2],[agentState@@@dg_header_Agent_State@@@C2M2],[status@@@dg_header_Status@@@C2M1],[eventID@@@dg_header_Event_ID@@@C3T1],[eventTimeDuration@@@dg_header_Generated_at@@@C3T2@@@date],[respondedTime@@@dg_header_Responded_at@@@C3B1@@@date],[resolvedTime@@@dg_header_Resolved_at@@@C3B2@@@date],[resolution@@@dg_header_Event_Status@@@C3M2],[responseState@@@dg_header_Event_Response_State@@@C3M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-event.xhtml"
+            }
+        }
+    },
+    "ListMonitoringProfile": {
+        "PageName": "Monitoring Profiles",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "MONITORING_PROFILE": {
+                "DataGridColumns": "templateName@@@dg_header_Monitoring_Profile_,sources@@@dg_header_Source,configOverview@@@dg_header_Count_of_Parameters_Configured,owner@@@dg_header_Owner,updatedDate@@@dg_header_Last_Modified@@@date,createdDate@@@dg_header_Created_At@@@date",
+                "SearchableColumns": "[templateName@@@dg_header_Monitoring_Profile@@@text],[sources@@@dg_header_Source@@@text],[updatedDate@@@dg_header_Last_Modified@@@text],[configOverview@@@dg_header_Count_of_Parameters_Configured@@@number],[owner@@@dg_header_Owner@@@text]",
+                "PDFXLSColumns": "[templateName@@@dg_header_Monitoring_Profile@@@C1T1],[sources@@@dg_header_Source@@@C1B1],[updatedDate@@@dg_header_Last_Modified@@@C2B1],[configOverview@@@dg_header_Count_of_Parameters_Configured@@@C2T1],[owner@@@dg_header_Owner@@@C2T2],[createdDate@@@dg_header_Created_At@@@C2B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-monitoring-profile.xhtml"
+            }
+        }
+    },
+    "CreateMonitoringProfile": {
+        "PageName": "Monitoring Profiles - Create New",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Creating Monitoring Profiles.htm",
+        "Entities": {
+            "MONITORING_PROFILE_PARAMETER": {
+                "DataGridColumns": "deviceTypeDisplayName@@@dg_header_Service,deviceAttributeDisplayName@@@dg_header_Attribute,deviceName@@@dg_header_Source,thresholdTxtCritical@@@dg_header_Critical_Threshold,thresholdTxtWarning@@@dg_header_Warning_Threshold,impactsAppAvailability@@@dg_header_Impacts_Application_Availability",
+                "SearchableColumns": "[deviceTypeDisplayName@@@dg_header_Service@@@text],[deviceAttributeDisplayName@@@dg_header_Attribute@@@text],[deviceName@@@dg_header_Source@@@text],[thresholdTxtCritical@@@dg_header_Critical_Threshold@@@text],[thresholdTxtWarning@@@dg_header_Warning_Threshold@@@text],[impactsAppAvailability@@@dg_header_Impacts_Application_Availability@@@text]",
+                "PDFXLSColumns": "[deviceTypeDisplayName@@@dg_header_Service@@@C1T1],[deviceAttributeDisplayName@@@dg_header_Attribute@@@C1T2],[deviceName@@@dg_header_Source@@@C2B1],[thresholdTxtCritical@@@dg_header_Critical_Threshold@@@C2T1],[thresholdTxtWarning@@@dg_header_Warning_Threshold@@@C2B2],[impactsAppAvailability@@@dg_header_Impacts_Application_Availability@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-monitorProfileParameter.xhtml"
+            }
+        }
+    },
+    "EditMonitoringProfile": {
+        "PageName": "Edit Monitoring Profile",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Editing Monitoring Profiles.htm",
+        "Entities": {
+            "MONITORING_PROFILE_PARAMETER": {
+                "DataGridColumns": "deviceTypeDisplayName@@@dg_header_Service,deviceAttributeDisplayName@@@dg_header_Attribute,deviceName@@@dg_header_Source,thresholdTxtCritical@@@dg_header_Critical_Threshold,thresholdTxtWarning@@@dg_header_Warning_Threshold,impactsAppAvailability@@@dg_header_Impacts_Application_Availability",
+                "SearchableColumns": "[deviceTypeDisplayName@@@dg_header_Service@@@text],[deviceAttributeDisplayName@@@dg_header_Attribute@@@text],[deviceName@@@dg_header_Source@@@text],[thresholdTxtCritical@@@dg_header_Critical_Threshold@@@text],[thresholdTxtWarning@@@dg_header_Warning_Threshold@@@text],[impactsAppAvailability@@@dg_header_Impacts_Application_Availability@@@text]",
+                "PDFXLSColumns": "[deviceTypeDisplayName@@@dg_header_Service@@@C1T1],[deviceAttributeDisplayName@@@dg_header_Attribute@@@C1T2],[deviceName@@@dg_header_Source@@@C2B1],[thresholdTxtCritical@@@dg_header_Critical_Threshold@@@C2T1],[thresholdTxtWarning@@@dg_header_Warning_Threshold@@@C2B2],[impactsAppAvailability@@@dg_header_Impacts_Application_Availability@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-monitorProfileParameter.xhtml"
+            }
+        }
+    },
+    "ChangeTracking": {
+        "PageName": "Change Tracking",
+        "MenuName": "Change Tracking",
+        "HelpFilePath": "/Monitoring/Editing Monitoring Profiles.htm",
+        "Entities": {
+            "CHANGE_TRACKING": {
+           		"ApplicableProviders" : "AMAZON,VMWARE,SAVVIS,AZURE,OPENSTACK",
+           		"DataGridColumns": "nameInGrid@@@dg_header_name,regionDetails@@@dg_header_Region,nameInProvider@@@dg_header_nameInProvider,change@@@dg_header_change,fromValue@@@dg_header_from,toValue@@@dg_header_to,timeOfOccurance@@@dg_header_date",
+                "SearchableColumns": "[nameInGrid@@@dg_header_name@@@text],[regionDetails@@@dg_header_Region@@@text],[nameInProvider@@@dg_header_nameInProvider@@@text],[change@@@dg_header_change@@@text],[fromValue@@@dg_header_from@@@text],[toValue@@@dg_header_to@@@text],[timeOfOccurance@@@dg_header_date@@@text]",
+                "PDFXLSColumns": "[nameInGrid@@@dg_header_name@@@C1T1],[regionDetails@@@dg_header_Region@@@C1T2],[nameInProvider@@@dg_header_nameInProvider@@@C2B1],[change@@@dg_header_change@@@C2T1],[fromValue@@@dg_header_from@@@C2B2],[toValue@@@dg_header_to@@@text],[timeOfOccurance@@@dg_header_date@@@text]",
+                "SelectionMode": "none",
+                "ColumnsIncludeFile": "dt-monitoringchange.xhtml"
+            }
+            }
+    },
+    "SystemConfigureTemplate": {
+        "PageName": "System Templates",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm"
+    },
+    "SystemApplyTemplate": {
+        "PageName": "System Templates",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "nickName@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@number],[osName@@@dg_header_OS@@@text]",
+                "PDFXLSColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@number],[osName@@@dg_header_OS@@@text]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "list-instance-data-grid-columns.xhtml"
+            }
+        }
+    },
+    "ApplicationMonitoringApplyTemplate": {
+        "PageName": "Application Template Management",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "nickName@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userLastName@@@dg_header_Assignee_Last_Name_,userFirstName@@@dg_header_Assignee_First_Name_",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@number],[osName@@@dg_header_OS@@@text],[userLastName@@@dg_header_Assignee_Last_Name_@@@text],[userFirstName@@@dg_header_Assignee_First_Name_@@@text]",
+                "PDFXLSColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@number],[osName@@@dg_header_OS@@@text],[userLastName@@@dg_header_Assignee_Last_Name_@@@text],[userFirstName@@@dg_header_Assignee_First_Name_@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "list-instance-data-grid-columns.xhtml"
+            }
+        }
+    },
+    "JMXAppDiscovery": {
+        "PageName": "Applications & Discovery",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "nickName@@@dg_header_Instance,instanceId@@@dg_header_InstanceId,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,userGroupName@@@dg_header_User_Group,monitoringTemplateName@@@dg_header_Monitoring_Profile,instanceName@@@dg_header_Name_in_Provider,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,montoringProfileState@@@dg_header_Monitoring_Profile_State,instanceState@@@dg_header_Instance_State,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,complianceList@@@dg_header_complianceList,agentState@@@dg_header_Agent_State,complianceState@@@dg_header_ComplianceState",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[instanceName@@@dg_header_Name_in_Provider@@@text],[userGroupName@@@dg_header_User_Group@@@text],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@text],[agentState@@@dg_header_Agent_State@@@text],[tagHolder.tags.combinedValue@@@dg_header_Tags@@@all]",
+                "PDFXLSColumns": "[osName@@@dg_header_OS@@@C0M1],[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[severity@@@dg_header_Severity@@@C1M1],[state@@@dg_header_State@@@C1M2],[displayIPs@@@dg_header_IP_Address@@@C2T1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2B1,monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M1],[agentState@@@dg_header_Agent_State@@@C2M2],[userFullName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[instanceName@@@dg_header_Name_in_Provider@@@C3B2],[instanceLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-instance.xhtml"
+            }
+        }
+    },
+    "JMXApplicationDiscovery": {
+        "PageName": "Applications & Discovery",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "jmx-application-discovery-data-grid-columns.xhtml"
+            }
+        }
+    },
+    "JMXConfMonitoringTemp": {
+        "PageName": "Applications & Templates",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "jmx-conf-temp-data-grid-columns.xhtml"
+            }
+        }
+    },
+    "JMXMbeansSelection": {
+        "PageName": "Applications & Parameters",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "jmx-mbeans-data-grid-columns.xhtml"
+            }
+        }
+    },
+     "ApplyMonitoringProfile": {
+        "PageName": "Apply Monitoring Profile",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Applying Monitoring Profiles.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "nickName@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,state@@@dg_header_State,status@@@dg_header_Status,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,userGroupName@@@dg_header_User_Group,instanceLaunchTime@@@dg_header_Launch_Time@@@date,applicationInstanceName@@@dg_header_application_name,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,montoringProfileState@@@dg_header_Monitoring_Profile_State,instanceState@@@dg_header_Instance_State,tags@@@dg_header_Tags,instanceId@@@dg_header_InstanceId,complianceList@@@dg_header_complianceList,complianceState@@@dg_header_ComplianceState,monitoringTemplateName@@@dg_header_Monitoring_Profile,agentState@@@dg_header_Agent_State",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[applicationInstanceName@@@dg_header_application_name@@@text],[userGroupName@@@dg_header_User_Group@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text]",
+                "PDFXLSColumns": "[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[state@@@dg_header_State@@@C1M2],[severity@@@dg_header_Severity@@@C1M1],[displayIPs@@@dg_header_IP_Address@@@C2B1],[osName@@@dg_header_OS@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2T1],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M1],[agentState@@@dg_header_Agent_State@@@C2M2], [applicationInstanceName@@@dg_header_application_name@@@C3B2],[userFullName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[instanceLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2T2],[instanceLaunchTime@@@dg_header_Launch_Time@@@C2B2]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-apply-instance.xhtml"
+            }
+        }
+    },
+    "ApplyAzureMonitoringProfile": {
+        "PageName": "Apply Monitoring Profile",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Applying Monitoring Profiles.htm",
+        "Entities": {
+            "APPLY_AZURE_MONITORING_PROFILE": {
+                "DataGridColumns": "name@@@dg_header_Service_Name,serviceDeployment@@@dg_header_Deployment,serviceRole@@@dg_header_Role,serviceDeploymentUrl@@@dg_header_URL",
+                "SearchableColumns": "[name@@@dg_header_Service_Name@@@text],[serviceDeployment@@@dg_header_Deployment@@@text],[serviceRole@@@dg_header_Role@@@text],[serviceDeploymentUrl@@@dg_header_URL@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Service_Name@@@text],[serviceDeployment@@@dg_header_Deployment@@@text],[serviceRole@@@dg_header_Role@@@text],[serviceDeploymentUrl@@@dg_header_URL@@@text]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-apply-azure-monitoring-profile.xhtml"
+            }
+        }
+    },
+      "ApplyObjStorageMonitoringProfile": {
+		"PageName": "Apply Monitoring Profile",
+        "MenuName": "Monitoring Profiles",
+       "HelpFilePath": "/Monitoring/Applying Monitoring Profiles.htm",
+        "Entities": {
+            "AZURE_OBJECT_STORAGE": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "name@@@dg_header_Storage_Account,serviceLocation@@@dg_header_Location,serviceStatus@@@dg_header_Status,type@@@dg_header_Type,monitoringTemplateName@@@dg_header_Monitoring_Profile,serviceSubLocation@@@dg_header_Secondary_Region,createdAt@@@dg_header_Created_At@@@date,severity@@@dg_header_Severity,monitoringStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[name@@@dg_header_Storage_Account@@@text],[serviceLocation@@@dg_header_Location@@@text],[serviceStatus@@@dg_header_Status@@@text],[type@@@dg_header_Type@@@text],[serviceSubLocation@@@dg_header_Secondary_Region@@@text],[createdAt@@@dg_header_Created_At@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Storage_Account@@@C1T1],[serviceLocation@@@dg_header_Location@@@C2T1],[type@@@dg_header_Type@@@C2B1],[serviceSubLocation@@@dg_header_Secondary_Region@@@C2B2],createdAt@@@dg_header_Created_At@@@C3T1@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-azure-storage-account-hdr.xhtml"
+            }
+        }
+    },
+    "ApplyLBMonitoringProfile": {
+        "PageName": "Apply Monitoring Profile",
+        "MenuName": "Monitoring Profiles",
+        "HelpFilePath": "/Monitoring/Applying Monitoring Profiles.htm",
+        "Entities": {
+            "LOAD_BALANCERS": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "loadBalancerName@@@dg_header_Name,severity@@@dg_header_Severity,locations@@@dg_header_Location,healthyCountInstance@@@dg_header_test,unhealthyCountInstance@@@dg_header_Status,updatedDate@@@dg_header_Last_Modified_Date,sortDate1@@@dg_header_Last_Modified_Date,monitoringProfileName@@@dg_header_Monitoring_Profile,monitoringProfileStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[loadBalancerName@@@dg_header_Name@@@text],[tags@@@dg_header_Tags@@@text],[locations@@@dg_header_Location@@@text],[updatedDate@@@dg_header_Last_Modified_Date@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@text]",
+                "PDFXLSColumns": "[loadBalancerName@@@dg_header_Name@@@C1T1],[severity@@@dg_header_Severity@@@C1M1],[locations@@@dg_header_Location@@@C2T1],[sortDate1@@@dg_header_Last_Modified_Date@@@C2B1@@@date],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B2],[unhealthyCountInstance@@@dg_header_Summary@@@text]",
+				"SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-load-balancers-aws-hdr.xhtml"
+            }
+        }
+    },
+    "ApplyStorageMonitoringProfile": {
+        "PageName": "Apply Monitoring Profile",
+        "MenuName": "Storage",
+        "HelpFilePath": "/Monitoring/Applying Monitoring Profiles.htm",
+        "Entities": {
+            "APPLY_EBS_VOLUME": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "volumeID@@@dg_header_Volume_ID,clusterName@@@dg_header_Availability_Zone,severity@@@dg_header_Severity,ebsSize@@@dg_header_Size,instanceNickName@@@dg_header_Instance_Attached_To,status@@@dg_header_Status,EBSCreatedDate@@@dg_header_Created_at@@@date,createdDtTime@@@dg_header_Created_at@@@date,snapshotID@@@dg_header_Source_Snapshot_ID,complianceState@@@dg_header_ComplianceState,EBSVolumeDetailsID@@@dg_header_EBSVolumeDetailsID,storageVolumeTypeName@@@dg_header_Volume_Type,storageProfileName@@@dg_header_Storage_Profile_Name,monitoringProfileName@@@dg_header_Monitoring_Profile,monitoringProfileStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[volumeID@@@dg_header_Volume_ID@@@text],[clusterName@@@dg_header_Availability_Zone@@@text],[ebsSize@@@dg_header_Size@@@number],[instanceNickName@@@dg_header_Instance_Attached_To@@@text],[status@@@dg_header_Status@@@text],[snapshotID@@@dg_header_Source_Snapshot_ID@@@text],[storageVolumeTypeName@@@dg_header_Volume_Type@@@text],[EBSCreatedDate@@@dg_header_Created_at@@@text],[storageProfileName@@@dg_header_Storage_Profile_Name@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@text]",
+                "PDFXLSColumns": "[volumeID@@@dg_header_Volume_ID@@@C1T1],[clusterName@@@dg_header_Availability_Zone@@@C1B1],[severity@@@dg_header_Severity@@@C1M1],[ebsSize@@@dg_header_Size@@@C2T1],[instanceNickName@@@dg_header_Instance_Attached_To@@@C2B2],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B2],[status@@@dg_header_Status@@@C2M1],[snapshotID@@@dg_header_Source_Snapshot_ID@@@C3B2],[storageVolumeTypeName@@@dg_header_Volume_Type@@@C2B1],[EBSCreatedDate@@@dg_header_Created_at@@@C3B1],[storageProfileName@@@dg_header_Storage_Profile_Name@@@C3T1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-ebs-volume-hdr.xhtml"
+            }
+        }
+    },
+    "ListMonitoringPolicy": {
+        "PageName": "Monitoring Policies",
+        "MenuName": "Monitoring Policies",
+        "HelpFilePath": "/Monitoring/Working with Monitoring Policies.htm"
+    },
+    "Trending": {
+        "PageName": "Trends",
+        "MenuName": "Trends",
+        "HelpFilePath": "/Analytics/Viewing Trends.htm"
+    },
+    "ListJobManagement": {
+        "PageName": "Tasks",
+        "MenuName": "tasks",
+        "HelpFilePath": "/Analytics/Viewing Task List.htm",
+        "Entities": {
+           "JOB_MANAGEMENT": {
+                "DataGridColumns": "taskId@@@dg_header_Task_Id,taskName@@@dg_header_Task,target@@@dg_header_Target,targetDeployment@@@dg_header_Deployment,targetGroup@@@dg_header_Instance_Group,initiatedBy@@@dg_header_Initiated_By,status@@@dg_header_Status,time@@@dg_header_Completed_at@@@date,details@@@dg_header_Details,createdDate@@@dg_header_Requested_at@@@date,groupedTask@@@dg_header_Details",
+                "SearchableColumns": "[td.TaskDescripnID@@@dg_header_Task@@@text],[td.Target@@@dg_header_Target@@@text],[td.TargetDeployment@@@dg_header_Deployment@@@text],[td.TargetGroup@@@dg_header_Instance_Group@@@text],[cud.FirstName@@@dg_header_Initiated_By@@@text],[ts.Status@@@dg_header_Status@@@text],[ts.RequestTime@@@dg_header_Requested_at@@@text],[ts.UpdateDate@@@dg_header_Completed_at@@@text],[ts.Comments@@@dg_header_Details@@@text]",
+                "PDFXLSColumns": "[taskName@@@dg_header_Task@@@C1T1],[details@@@dg_header_Details@@@C1B1],[target@@@dg_header_Target@@@C2T1],[targetDeployment@@@dg_header_Deployment@@@C2B1],[targetGroup@@@dg_header_Instance_Group@@@C2B2],[status@@@dg_header_Status@@@C3T1],[initiatedBy@@@dg_header_Initiated_By@@@C3T2],[createdDate@@@dg_header_Requested_at@@@C3B1@@@date],[time@@@dg_header_Completed_at@@@C3B2@@@date],[details@@@dg_header_Details@@@text]",
+                "SelectionMode": "none",
+                "ColumnsIncludeFile": "dt-job-mgmnt.xhtml"
+            },
+            "SCHEDULED_TASK": {
+                "DataGridColumns": "taskId@@@dg_header_Task_Id,taskName@@@dg_header_Task,taskNameDisplay@@@dg_header_Task,schedulingInfo@@@dg_header_Details,target@@@dg_header_Target,targetLocation@@@dg_header_Location,status@@@dg_header_State,initiatedBy@@@dg_header_Scheduled_By,nextFireTime@@@dg_header_Next_Execution_At,nextFireDtTime@@@dg_header_Next_Execution_At@@@date",
+                "SearchableColumns": "[taskName@@@dg_header_Task@@@text],[schedulingInfo@@@dg_header_Details@@@text],[target@@@dg_header_Target@@@text],[targetLocation@@@dg_header_Location@@@text],[status@@@dg_header_State@@@text],[initiatedBy@@@dg_header_Scheduled_By@@@text],[nextFireTime@@@dg_header_Next_Execution_At@@@text],[nextFireDtTime@@@dg_header_Next_Execution_At@@@text]",
+                "PDFXLSColumns": "[taskName@@@dg_header_Task@@@C1T1],[schedulingInfo@@@dg_header_Details@@@C1B1],[target@@@dg_header_Target@@@C2T1],[targetLocation@@@dg_header_Location@@@C2B1],[status@@@dg_header_State@@@C1M1],[initiatedBy@@@dg_header_Scheduled_By@@@C3T1],[nextFireTime@@@dg_header_Next_Execution_At@@@C3T2@@@date]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-scheduled-tasks.xhtml"
+            },
+            "AUDIT_LOG": {
+                "DataGridColumns": "taskName@@@dg_header_Task,initiatedBy@@@dg_header_Initiated_By,status@@@dg_header_Status,time@@@dg_header_Audited_Time@@@date,details@@@dg_header_Details",
+                "SearchableColumns": "[ad.action@@@dg_header_Task@@@text],[cud.FirstName@@@dg_header_Initiated_By@@@text],[ad.isSuccessful@@@dg_header_Status@@@text],[ad.timeOfInvocation@@@dg_header_Audited_Time@@@text],[ad.updateDate@@@dg_header_Completed_at@@@text],[ad.data@@@dg_header_Details@@@text]",
+                "PDFXLSColumns": "[taskName@@@dg_header_Task@@@C1T1],[details@@@dg_header_Details@@@C1B1],[status@@@dg_header_Status@@@C2T1],[initiatedBy@@@dg_header_Initiated_By@@@C2T2],[time@@@dg_header_Audited_Time@@@C2B1@@@date]",
+                "SelectionMode": "none",
+                "ColumnsIncludeFile": "dt-auditlog-mgmnt.xhtml"
+            },
+            "PENDING_REQUESTS": {
+                "DataGridColumns": "taskName@@@dg_header_Task,details@@@dg_header_Details,target@@@dg_header_Target,createdDate@@@dg_header_Requested_at,cost@@@dg_header_Cost@@@text,comments@@@dg_header_Comments@@@text,userName@@@dg_header_User@@@text",
+                "SearchableColumns": "[taskName@@@dg_header_Task@@@text],[details@@@dg_header_Details@@@text],[target@@@dg_header_Target@@@text],[createdDate@@@dg_header_Requested_at@@@date],[cost@@@dg_header_Cost@@@text],[comments@@@dg_header_Comments@@@text],[userName@@@dg_header_User@@@text]",
+                "PDFXLSColumns": "[taskName@@@dg_header_Task@@@C1T1],[details@@@dg_header_Details@@@C1B1],[target@@@dg_header_Target@@@C2T1],[cost@@@dg_header_Cost@@@C2B1],[comments@@@dg_header_Comments@@@C2B2@@@date],[userName@@@dg_header_User@@@C3T1],[createdDate@@@dg_header_Requested_at@@@C3B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-pending-request-mgmnt.xhtml"
+            }
+        }
+    },
+    "ConsumptionMetering": {
+        "PageName": "Consumption Metering",
+        "MenuName": "Metering",
+        "HelpFilePath": "/Analytics/Viewing Metering.htm",
+        "Entities": {
+            "CONSUMPTIONMETERINGAMAZON": {
+            "ApplicableProviders" : "AMAZON,AZURE,OPENSTACK",
+                "DataGridColumns": "entityID@@@dg_header_Instance_ID,entity@@@dg_header_Instance_Name,totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time,totalMonitoredTimeFormatted@@@dg_header_Monitored_Time,totalTimeFormatted@@@dg_header_Life_Time,serviceProfileName@@@dg_header_Compute_Profile,monitoringProfileName@@@dg_header_Monitoring_Profile,osName@@@dg_header_OS,totalCharge@@@dg_header_Total_Show-back_Cost__USD_,computeCharge@@@dg_header_Compute_Cost,overheadCharge@@@dg_network_cost,storageCharge@@@dg_header_Storage_Cost,monitoringCharge@@@dg_header_Monitoring_Costs",
+                "SelectionMode": "single",
+                "SearchableColumns": "[entity@@@dg_header_Instance_Name@@@text],[serviceProfileName@@@dg_header_Compute_Profile@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[osName@@@dg_header_OS@@@text],[totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time@@@text],[computeCharge@@@dg_header_Compute_Cost@@@number],[storageCharge@@@dg_header_Storage_Cost@@@number],[overheadCharge@@@dg_network_cost@@@number],[totalCharge@@@dg_header_Total_Show-back_Cost__USD_@@@number]",
+                "PDFXLSColumns": "[entity@@@dg_header_Instance_Name@@@C1T1],[totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time@@@C1B1@@@date],[serviceProfileName@@@dg_header_Compute_Profile@@@C2T1],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B1],[osName@@@dg_header_OS@@@C2B2],[totalCharge@@@dg_header_Total_Show-back_Cost__USD_@@@C3T1],[computeCharge@@@dg_header_Compute_CostUSD@@@C3B1],[storageCharge@@@dg_header_Storage_Cost_USD@@@C3B2],[overheadCharge@@@dg_network_cost@@@C3B3]",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-consumption-metering-amazon.xhtml"
+            },
+            "CONSUMPTIONMETERING": {
+            "ApplicableProviders" : "VMWARE,SAVVIS,TERREMARK_ECLOUD,SCVMM",
+                "DataGridColumns": "entityID@@@dg_header_Instance_ID,entity@@@dg_header_Instance_Name,totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time,totalMonitoredTimeFormatted@@@dg_header_Monitored_Time,totalTimeFormatted@@@dg_header_Life_Time,serviceProfileName@@@dg_header_Compute_Profile,monitoringProfileName@@@dg_header_Monitoring_Profile,osName@@@dg_header_OS,totalCharge@@@dg_header_Total_Show-back_Cost__USD_,computeCharge@@@dg_header_Compute_Cost,overheadCharge@@@dg_overhead_cost,storageCharge@@@dg_header_Storage_Cost,monitoringCharge@@@dg_header_Monitoring_Costs",
+                "SelectionMode": "single",
+                "SearchableColumns": "[entity@@@dg_header_Instance_Name@@@text],[serviceProfileName@@@dg_header_Compute_Profile@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[osName@@@dg_header_OS@@@text],[totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time@@@text],[computeCharge@@@dg_header_Compute_Cost@@@number],[storageCharge@@@dg_header_Storage_Cost@@@number],[overheadCharge@@@dg_overhead_cost@@@number],[totalCharge@@@dg_header_Total_Show-back_Cost__USD_@@@number]",
+                "PDFXLSColumns": "[entity@@@dg_header_Instance_Name@@@C1T1],[totalPoweredOnTimeFormatted@@@dg_header_Powered-on_Time@@@C1B1@@@date],[serviceProfileName@@@dg_header_Compute_Profile@@@C2T1],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B1],[osName@@@dg_header_OS@@@C2B2],[totalCharge@@@dg_header_Total_Show-back_Cost__USD_@@@C3T1],[computeCharge@@@dg_header_Compute_CostUSD@@@C3B1],[storageCharge@@@dg_header_Storage_Cost_USD@@@C3B2],[overheadCharge@@@dg_overhead_cost@@@C3B3]",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-consumption-metering.xhtml"
+            }
+        }
+    },
+    "TimeSlots": {
+        "PageName": "Time Slots",
+        "MenuName": "TimeSlots",
+        "HelpFilePath": "/Analytics/Viewing Metering.htm",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "fromTime@@@dg_header_From_Time,toTime@@@dg_header_To_Time,powerOnDurationFormatted@@@dg_header_Powered-on-Time,storageDurationFormatted@@@dg_header_Life_Time,computeResources@@@dg_header_Compute_Resources,storageResources@@@dg_header_Storage_Resources,computeCharge@@@dg_header_Compute_Cost,storageCharge@@@dg_header_Storage_Cost,overheadCharge@@@dg_header_Overhead_Cost,deploymentName@@@dg_header_Deployment,instanceGroupName@@@dg_header_Instance_Group,assigneeName@@@dg_header_User_Name,assigneeGroupName@@@dg_header_User_Group,datacenterName@@@dg_header_Region/Data_Center,clusterName@@@dg_header_Availability_Zone/Cluster,serverMasterName@@@dg_header_Server",
+                "SearchableColumns": "",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": ""
+            }
+        }
+    },
+    "Reporting": {
+        "PageName": "Reports",
+        "MenuName": "Reports",
+        "HelpFilePath": "/Analytics/Generating Reports.htm",
+        "Entities": {
+            "REPORTING": {
+                "DataGridColumns": "reportName@@@dg_header_Report_Name,reportDescription@@@dg_header_Description",
+                "SelectionMode": "single",
+                "SearchableColumns": "[reportName@@@dg_header_Report_Name@@@text],[reportDescription@@@dg_header_Description@@@text]",
+                "PDFXLSColumns": "[reportName@@@dg_header_Report_Name@@@C1T1],[reportDescription@@@dg_header_Description@@@C2T1]",
+                "ColumnsIncludeFile": "dt-reports.xhtml"
+            },
+              "DOWNLOADREPORTS": {
+            	"DataGridColumns": "reportName@@@dg_header_Report_Name,initiatedBy@@@dg_header_InitiatedBy,fromDate@@@dg_header_from,toDate@@@dg_header_to,requestedAt@@@dg_header_Requested_at,reportPath@@@keyPair_downloadKeyPair_text_button",
+                "SelectionMode": "single",
+                "SearchableColumns": "[reportName@@@dg_header_Report_Name@@@text],[initiatedBy@@@dg_header_InitiatedBy@@@text],[fromDate@@@dg_header_from@@@text],[toDate@@@dg_header_to@@@text],[requestedAt@@@dg_header_Requested_at@@@text]",
+                "PDFXLSColumns": "",
+                "ColumnsIncludeFile": "dt-downloadreports.xhtml"
+            }
+        }
+    },
+    "Billing": {
+        "PageName": "Provider Billing",
+        "MenuName": "Provider Billing",
+        "HelpFilePath": "/Analytics/Viewing Provider Billing.htm",
+        "Entities": {
+            "BILLING": {
+                "DataGridColumns": "type@@@dg_header_product_name,unitCost@@@dg_header_unitCost",
+                "SearchableColumns": "[type@@@dg_header_product_name@@@text],[unitCost@@@dg_header_unitCost@@@text]",
+                "PDFXLSColumns": "[type@@@dg_header_product_name@@@C1T1],[unitCost@@@dg_header_unitCost@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-providerBilling.xhtml"
+            }
+        }
+    },
+     "Diagnostics": {
+        "PageName": "Diagnostics",
+        "MenuName": "Diagnostics",
+        "HelpFilePath": "/Settings/Performing Diagnostics.htm",
+        "Entities": {
+            "DIAGNOSTICS": {
+                "DataGridColumns": "entityType@@@dg_header_Entity,ipAddress@@@dg_ipaddress,details@@@dg_event_Details,timeGenerated@@@dg_header_Generated_at",
+                "SearchableColumns": "[entityType@@@dg_header_Entity@@@text],[details@@@dg_event_Details@@@text],[timeGenerated@@@dg_header_Generated_at@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-diagnostics.xhtml"
+            }
+        }
+    },
+     "BasicDiagnostic": {
+        "PageName": "Basic Diagnostics",
+        "MenuName": "Diagnostics",
+        "HelpFilePath": "/Settings/Performing Diagnostics.htm",
+        
+       "Entities": {
+            "DIAGNOSTICS": {}
+        }
+    },
+    
+    "DeepDiagnostic": {
+        "PageName": "Deep Diagnostics",
+        "MenuName": "Diagnostics",
+        "HelpFilePath": "/Settings/Performing Diagnostics.htm",
+        "Entities": {
+            "DIAGNOSTICS": {}
+        }
+    },
+    
+    
+    "ListDiagnostics": {
+        "PageName": "Diagnostics",
+        "MenuName": "Diagnostics",
+        "HelpFilePath": "/Settings/Performing Diagnostics.htm",
+        "Entities": {
+            "DIAGNOSTICS": {}
+        }
+    },
+    "SecurityGroup": {
+        "PageName": "Firewalls",
+        "MenuName": "Firewalls",
+        "HelpFilePath": "/Security/Configuring Firewalls.htm",
+        "Entities": {
+	            "SECURITY_GROUPS": {
+	            "ApplicableProviders" : "AMAZON",
+	            "DataGridColumns": "name@@@dg_header_Name,securityGroupId@@@dg_header_Group_ID,awsSecurityGroupId@@@dg_header_Group_ID,description@@@dg_header_Description,datacenterDisplayName@@@dg_header_Region,vpcId@@@dg_header_VPC_ID,complianceState@@@dg_header_ComplianceState",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[awsSecurityGroupId@@@dg_header_Group_ID@@@text],[description@@@dg_header_Description@@@text],[datacenterDisplayName@@@dg_header_Region@@@text],[vpcId@@@dg_header_VPC_ID@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[description@@@dg_header_Description@@@C1B1],[vpcId@@@dg_header_VPC_ID@@@C1B2],[awsSecurityGroupId@@@dg_header_Group_ID@@@C2T1],[datacenterDisplayName@@@dg_header_Region@@@C2B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-security-groups.xhtml"
+            },
+            "SECURITY_GROUPS_SAVVIS": {
+            	"ApplicableProviders" : "SAVVIS",
+                "DataGridColumns": "name@@@dg_header_Type,vpdc@@@dg_header_VPDC,region@@@dg_header_Region,profile@@@dg_header_Profile",
+                "SearchableColumns": "[name@@@dg_header_Type@@@text],[vpdc@@@dg_header_VPDC@@@text],[region@@@dg_header_Region@@@text],[profile@@@dg_header_Profile@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@text],[vpdc@@@dg_header_VPDC@@@text],[region@@@dg_header_Region@@@text],[profile@@@dg_header_Profile@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-savvis-firewalls.xhtml"
+            },
+            "SECURITY_GROUPS_AZURE": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "name@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,endPointCount@@@dg_header_EndPoints",
+                "SearchableColumns": "[name@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[endPointCount@@@dg_header_EndPoints@@@number]",
+                "PDFXLSColumns": "[name@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[endPointCount@@@dg_header_EndPoints@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-azure-firewalls.xhtml"
+            }
+        }
+    },
+    "ManageEndPoints": {
+        "PageName": "Manage Endpoints",
+        "MenuName": "Manage Endpoints",
+        "HelpFilePath": "",
+        "Entities": {
+            "MANAGE_ENDPOINT": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "name@@@dg_header_Name,ipProtocol@@@dg_header_Protocol,fromPort@@@dg_header_Public_Port,toPort@@@dg_header_Private_Port,loadBalancedname@@@dg_header_Load_Balanced_Name",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[ipProtocol@@@dg_header_Protocol@@@text],[fromPort@@@dg_header_Public_Port@@@text],[toPort@@@dg_header_Private_Port],[loadBalancedname@@@dg_header_Load_Balanced_Name@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[ipProtocol@@@dg_header_Protocol@@@C2T1],[fromPort@@@dg_header_Public_Port@@@C3T1],[toPort@@@dg_header_Private_Port@@@C4T1],[loadBalancedname@@@dg_header_Load_Balanced_Name@@@C5T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-manage-endpoints-hdr.xhtml"
+            }
+        }
+    },
+    "ManageACLs": {
+        "PageName": "Manage ACLs",
+        "MenuName": "Manage ACLs",
+        "Entities": {
+            "MANAGE_ACL": {}
+        }
+    },    
+    "SavvisFireWallRules": {
+        "PageName": "Firewalls",
+        "MenuName": "Firewalls",
+        "HelpFilePath": "/Security/Configuring Firewalls.htm",
+        "Entities": {
+            "RULES_SECURITY_GROUP": {
+                "DataGridColumns": "source@@@dg_header_Source,destination@@@dg_header_Destination,port@@@dg_header_Port,ipProtocol@@@dg_header_Protocol,action@@@dg_header_Action,log@@@dg_header_Log",
+                "SearchableColumns" : "",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-savvis-firewall-rules.xhtml"
+            }
+        }
+    },
+    "SecurityGroupRules": {
+        "PageName": "Firewalls",
+        "MenuName": "Firewalls",
+        "HelpFilePath": "/Security/Configuring Firewalls.htm",
+        "Entities": {
+            "RULES_SECURITY_GROUP": {
+                  "DataGridColumns": "ipProtocolDisplay@@@dg_header_Protocol,fromPortName@@@dg_header_Port_Service,fromIP@@@dg_header_Source_CIDR,awsSecurityGroupId@@@dg_header_Source_Security_Group,outBound@@@dg_header_Rule_Type",
+                "SearchableColumns" : "",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-rules-sec-grps.xhtml"
+            }
+        }
+    },
+    "ListKeyPair": {
+        "PageName": "Key Pairs",
+        "MenuName": "Key Pairs",
+        "HelpFilePath": "/Security/Creating Key Pairs.htm",
+        "ApplicableView" :"INFRA_VIEW",
+        "Entities": {
+            "KEY_PAIR": {
+                "DataGridColumns": "keyPairName@@@dg_header_Key_Pair_Name,fingerPrint@@@dg_header_Finger_Print,location@@@dg_header_Region",
+                "SearchableColumns": "[keyPairName@@@dg_header_Key_Pair_Name@@@text],[fingerPrint@@@dg_header_finger_print@@@text],[location@@@dg_header_Region@@@text]",
+                "PDFXLSColumns": "[keyPairName@@@dg_header_Key_Pair_Name@@@C1T1],[fingerPrint@@@dg_header_finger_print@@@C2T1],[location@@@dg_header_Region@@@C3T1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-keypair.xhtml"
+            }
+        }
+    },
+    "RolesPermission": {
+        "PageName": "Roles & Permissions",
+        "MenuName": "Roles & Permissions",
+        "HelpFilePath": "/Security/Configuring Roles and Permissions.htm"
+    },
+    "CloudSettings": {
+        "PageName": "Settings",
+        "MenuName": "Settings",
+        "HelpFilePath": "/Settings/Configuring Cloud Settings.htm"
+    },
+    "ManageAppGroups": {
+        "PageName": "Instance Groups",
+        "MenuName": "Instance Groups",
+        "HelpFilePath": "/Settings/Configuring Instance Groups.htm",
+        "Entities": {
+            "INSTANCE_GROUP": {
+                "DataGridColumns": "groupName@@@dg_header_Name,groupDesc@@@dg_header_Description",
+                "SearchableColumns": "[groupName@@@dg_header_Name@@@text],[groupDesc@@@dg_header_Description@@@text]",
+                "PDFXLSColumns": "[groupName@@@dg_header_Name@@@C1T1],[groupDesc@@@dg_header_Description@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-instance-group.xhtml"
+            }
+        }
+    },
+    "ManageDeployments": {
+        "PageName": "Deployments",
+        "MenuName": "Deployments",
+        "HelpFilePath": "/Settings/Configuring Deployments.htm",
+        "Entities": {
+            "DEPLOYMENT": {
+                "DataGridColumns": "deploymentName@@@dg_header_Name,deploymentDescription@@@dg_header_Description",
+                "SearchableColumns": "[deploymentDescription@@@dg_header_Description@@@text],[deploymentName@@@dg_header_Name@@@text]",
+                "PDFXLSColumns": "[deploymentName@@@dg_header_Name@@@C1T1],[deploymentDescription@@@dg_header_Description@@@C2T1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-deployment.xhtml"
+            }
+        }
+    },
+    "ManageUsers": {
+        "PageName": "Users",
+        "MenuName": "Users",
+        "HelpFilePath": "/Settings/Configuring Users.htm",
+        "Entities": {
+            "USER": {
+                "DataGridColumns": "firstName@@@dg_header_First_Name,lastName@@@dg_header_Last_Name,userName@@@dg_header_Username,authRealmType@@@dg_header_Authentication,userGroups@@@dg_header_User_Group_s_,emailID@@@dg_header_Email,mobileNumber@@@dg_header_Contact_Number",
+                "SearchableColumns": "[firstName@@@dg_header_First_Name@@@text],[lastName@@@dg_header_Last_Name@@@text],[userName@@@dg_header_Username@@@text],[authRealmType@@@dg_header_Authentication@@@text],[userGroups@@@dg_header_User_Group_s_@@@text],[emailID@@@dg_header_Email@@@text],[mobileNumber@@@dg_header_Contact_Number@@@number]",
+                "PDFXLSColumns": "[firstName@@@dg_header_First_Name@@@C1T2],[lastName@@@dg_header_Last_Name@@@C1T1],[userName@@@dg_header_Username@@@C1B1],[authRealmType@@@dg_header_Authentication@@@C1B2],[userGroups@@@dg_header_User_Group_s_@@@C2T1],[emailID@@@dg_header_Email@@@C3T1],[mobileNumber@@@dg_header_Contact_Number@@@C3B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-user.xhtml"
+            }
+        }
+    },
+    "ImportUsers": {
+        "PageName": "Import User",
+        "MenuName": "ImportUsers",
+        "HelpFilePath": "/Settings/Importing Users.htm",
+        "Entities": {
+            "IMPORT_USER": {
+                "DataGridColumns": "firstName@@@dg_header_First_Name,lastName@@@dg_header_Last_Name,userName@@@dg_header_Username,emailID@@@dg_header_Email",
+                "SearchableColumns": "[firstName@@@dg_header_First_Name@@@usrtext],[lastName@@@dg_header_Last_Name@@@usrtext],[userName@@@dg_header_Username@@@usrtext],[emailID@@@dg_header_Email@@@usrtext]",
+                "PDFXLSColumns": "[firstName@@@dg_header_First_Name@@@usrtext],[lastName@@@dg_header_Last_Name@@@usrtext],[userName@@@dg_header_Username@@@usrtext],[emailID@@@dg_header_Email@@@usrtext]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-import-user.xhtml"
+            }
+        }
+    },
+    "ManageUserGroups": {
+        "PageName": "User Groups",
+        "MenuName": "User Groups",
+        "HelpFilePath": "/Settings/Configuring User Groups.htm",
+        "Entities": {
+            "USER_GROUP": {
+                "DataGridColumns": "groupName@@@dg_header_Name,description@@@dg_header_Description,quotaForUserGroup@@@dg_header_Quota,quota@@@dg_header_Quota,visibilityText@@@dg_header_Visibility",
+                "SearchableColumns": "[groupName@@@dg_header_Name@@@text],[description@@@dg_header_Description@@@text],[quota@@@dg_header_Quota@@@number],[visibilityText@@@dg_header_Visibility@@@text]",
+                "PDFXLSColumns": "[groupName@@@dg_header_Name@@@C1T1],[description@@@dg_header_Description@@@C1B1],[quota@@@dg_header_Quota@@@C2T1],[visibilityText@@@dg_header_Visibility@@@C2B1]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-userGroup.xhtml"
+            }
+        }
+    },
+    "ManageUserRoles": {
+        "PageName": "User Groups",
+        "MenuName": "User Groups",
+        "HelpFilePath": "/Settings/Configuring User Groups.htm",
+        "Entities": {
+            "USER_GROUP_ROLE": {
+                "DataGridColumns": "roleName@@@dg_header_Roles,roleDeployment@@@dg_header_Deployment,roleInstance@@@dg_header_Instance_Group",
+                "SearchableColumns": "[roleName@@@dg_header_Roles@@@text],[roleDeployment@@@dg_header_Deployment@@@text],[roleInstance@@@dg_header_Instance_Group@@@text]",
+                "PDFXLSColumns": "[roleName@@@dg_header_Roles@@@text],[roleDeployment@@@dg_header_Deployment@@@text],[roleInstance@@@dg_header_Instance_Group@@@text]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-userGroupRole.xhtml"
+            }
+        }
+    },
+    "Notifications": {
+        "PageName": "Notifications",
+        "MenuName": "Notifications",
+        "HelpFilePath": "/Settings/Configuring Notifications.htm",
+        "Entities": {
+            "USER": {
+                "DataGridColumns": "lastName@@@dg_header_Last_Name,firstName@@@dg_header_First_Name,userName@@@dg_header_Username,authRealmType@@@dg_header_Authentication,userGroups@@@dg_header_User_Group_s_,emailID@@@dg_header_Email_ID,mobileNumber@@@dg_header_Contact_Number",
+                "SearchableColumns": "[lastName@@@dg_header_Last_Name@@@text],[firstName@@@dg_header_First_Name@@@text],[userName@@@dg_header_Username@@@text],[authRealmType@@@dg_header_Authentication@@@text],[userGroups@@@dg_header_User_Group_s_@@@text],[emailID@@@dg_header_Email_ID@@@text],[mobileNumber@@@dg_header_Contact_Number@@@number]",
+                "PDFXLSColumns": "[lastName@@@dg_header_Last_Name@@@C1T1],[firstName@@@dg_header_First_Name@@@C1T2],[userName@@@dg_header_Username@@@C1B1],[authRealmType@@@dg_header_Authentication@@@C1B2],[userGroups@@@dg_header_User_Group_s_@@@C2T1],[emailID@@@dg_header_Email_ID@@@C3T1],[mobileNumber@@@dg_header_Contact_Number@@@C3B1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-notification-user.xhtml"
+            },
+            "USER_GROUP": {
+                "DataGridColumns": "groupName@@@dg_header_Name,description@@@dg_header_Description",
+                "SearchableColumns": "[groupName@@@dg_header_Name@@@text],[description@@@dg_header_Description@@@text]",
+                "PDFXLSColumns": "[groupName@@@dg_header_Name@@@C1T1],[description@@@dg_header_Description@@@C2T1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-notification-userGroup.xhtml"
+            }
+        }
+    },
+    "ListUnAssignSnap": {
+        "PageName": "Snapshots",
+        "MenuName": "UnAssign Snapshot",
+        "HelpFilePath": "",
+        "Entities": {
+            "INSTANCE": {
+                "DataGridColumns": "instanceName@@@dg_header_Instance_,nickName@@@dg_header_NickName,createDT@@@dg_header_CreateDate@@@date",
+                "SearchableColumns": "[instanceName@@@dg_header_Instance@@@text],[nickName@@@dg_header_NickName@@@text],[createDT@@@dg_header_CreateDate@@@text]",
+                "PDFXLSColumns": "[instanceName@@@dg_header_Instance@@@text],[nickName@@@dg_header_NickName@@@text],[createDT@@@dg_header_CreateDate@@@text]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "aix-revertsnap-data-grid-columns.xhtml"
+            }
+        }
+    },
+    "NetworkInterfaces": {
+        "PageName": "Network",
+        "MenuName": "Network",
+        "HelpFilePath": "/Provisioning/Provisioning Network Interfaces.htm",
+        "ApplicableView" :"INFRA_VIEW",
+        "Entities": {
+            "NETWORK_INTERFACES": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "networkInterfaceID@@@dg_header_Network_Interface_ID,subnetID@@@dg_header_Subnet_ID,clusterName@@@dg_header_Availability_Zone,primaryPrivateIP@@@dg_header_Primary_Private_IP,publicIP@@@dg_header_Public_IP,secondaryPrivateIPsDisplay@@@dg_header_Secondary_Private_IP_s_,status@@@dg_header_Status,securityGroupsDisplay@@@dg_header_Security_Group_s_,instanceName@@@dg_header_Instance_Name,description@@@dg_header_Description",
+                "SearchableColumns": "[networkInterfaceID@@@dg_header_Network_Interface_ID@@@text],[subnetID@@@dg_header_Subnet_ID@@@text],[clusterName@@@dg_header_Availability_Zone@@@text],[primaryPrivateIP@@@dg_header_Primary_Private_IP@@@text],[publicIP@@@dg_header_Public_IP@@@text],[secondaryPrivateIPsDisplay@@@dg_header_Secondary_Private_IP_s_@@@text],[status@@@dg_header_Status@@@text],[securityGroupsDisplay@@@dg_header_Security_Group_s_@@@text],[instanceName@@@dg_header_Instance_Name@@@text],[description@@@dg_header_Description@@@text]",
+                "PDFXLSColumns": "[networkInterfaceID@@@dg_header_Network_Interface_ID@@@C1T1],[subnetID@@@dg_header_Subnet_ID@@@C1B1],[clusterName@@@dg_header_Availability_Zone@@@C2B1],[primaryPrivateIP@@@dg_header_Primary_Private_IP@@@C3T1],[publicIP@@@dg_header_Public_IP@@@C3T2],[secondaryPrivateIPsDisplay@@@dg_header_Secondary_Private_IP_s_@@@C3B2],[status@@@dg_header_Status@@@C3M2],[securityGroupsDisplay@@@dg_header_Security_Group_s_@@@C3B1],[instanceName@@@dg_header_Instance_Name@@@C2T1],[description@@@dg_header_Description@@@C1B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-eni.xhtml"
+            },
+            "NETWORK_INTERFACES_AZURE": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "description@@@dg_header_Virtual_Network,resourceGroupName@@@dg_header_Resource_Group_Name,clusterName@@@dg_header_Affinity_Group,dataCenterName@@@dg_header_Location,primaryPrivateIP@@@dg_header_IP_Address,gatewayType@@@dg_header_Gateway_Type,networkManagementType@@@dg_header_Network_Type",
+                "SearchableColumns": "[description@@@dg_header_Virtual_Network@@@text],[networkInterfaceID@@@dg_header_Network_Interface_ID@@@text],[clusterName@@@dg_header_Affinity_Group@@@text],[dataCenterName@@@dg_header_Location@@@text],[primaryPrivateIP@@@dg_header_IP_Address@@@text],[gatewayType@@@dg_header_Gateway_Type@@@text],[networkManagementType@@@dg_header_Network_Type@@@text]",
+                "PDFXLSColumns": "[description@@@dg_header_Virtual_Network@@@C1T1],[networkInterfaceID@@@dg_header_Network_Interface_ID@@@C1B1],[clusterName@@@dg_header_Affinity_Group@@@C2T2],[dataCenterName@@@dg_header_Location@@@C2T1],[primaryPrivateIP@@@dg_header_IP_Address@@@C3T1],[gatewayType@@@dg_header_Gateway_Type@@@C3B1],[networkManagementType@@@dg_header_Network_Type@@@C3B2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-eni-azure.xhtml"
+            }
+        }
+    },
+    "ListImages": {
+	"PageName": "Images",
+        "MenuName": "Images",
+       "HelpFilePath": "/Provisioning/Provisioning images.htm",
+        "Entities": {
+            "IMAGES": {
+			"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "imageName@@@azure_image_name_offer_sku,imageType@@@dg_header_Type,osName@@@dg_header_OS,imageDetails@@@azure_crtinst_ami_hdr2,location@@@dg_header_Location",
+                "SearchableColumns": "[imageName@@@azure_image_name_offer_sku@@@text],[imageType@@@dg_header_Type@@@text],[imageDetails@@@azure_crtinst_ami_hdr2@@@text],[location@@@dg_header_Location@@@text],osName@@@dg_header_OS@@@C3T1@@@text]",
+                "PDFXLSColumns": "[imageName@@@azure_image_name_offer_sku@@@C1T1],[imageType@@@dg_header_Type@@@C2T1],[imageDetails@@@azure_crtinst_ami_hdr2@@@C2B1],[location@@@dg_header_Location@@@C2B2],osName@@@dg_header_OS@@@C3T1@@@C1M3]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-images.xhtml"
+            }
+        }
+    },
+    "LoadBalancerAWS": {
+        "PageName": "Load Balancers",
+        "MenuName": "Load Balancers",
+        "HelpFilePath": "/Provisioning/Provisioning Load Balancers.htm",
+        "ApplicableView" :"INFRA_VIEW",
+        "Entities": {
+            "LOAD_BALANCERS": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "loadBalancerName@@@dg_header_Name,severity@@@dg_header_Severity,locations@@@dg_header_Location,healthyCountInstance@@@dg_header_test,unhealthyCountInstance@@@dg_header_Status,updatedDate@@@dg_header_Last_Modified_Date,sortDate1@@@dg_header_Last_Modified_Date,monitoringProfileName@@@dg_header_Monitoring_Profile,monitoringProfileStatus@@@dg_header_Monitoring_Profile_State",
+                "SearchableColumns": "[loadBalancerName@@@dg_header_Name@@@text],[locations@@@dg_header_Location@@@text],[updatedDate@@@dg_header_Last_Modified_Date@@@text],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@text],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@text]",
+                "PDFXLSColumns": "[loadBalancerName@@@dg_header_Name@@@C1T1],[severity@@@dg_header_Severity@@@C1M1],[locations@@@dg_header_Location@@@C2T1],[updatedDate@@@dg_header_Last_Modified_Date@@@C2B1@@@date],[monitoringProfileName@@@dg_header_Monitoring_Profile@@@C2B2],[monitoringProfileStatus@@@dg_header_Monitoring_Profile_State@@@C2M1],[healthyCountInstance@@@dg_header_Healthy@@@C3M1],[unhealthyCountInstance@@@dg_header_Unhealthy@@@C3M2]",
+				"SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-load-balancers-aws-hdr.xhtml"
+            },
+            "LOAD_BALANCERS_SAVVIS": {
+            	"ApplicableProviders" : "SAVVIS",
+                "DataGridColumns": "loadBalancerName@@@dg_header_Name,locations@@@dg_header_Location,healthyCountInstance@@@dg_header_test,unhealthyCountInstance@@@dg_header_Status,updatedDate@@@dg_header_Last_Modified_Date,sortDate1@@@dg_header_Last_Modified_Date",
+                "SearchableColumns": "[loadBalancerName@@@dg_header_Name@@@text],[locations@@@dg_header_Location@@@text],[updatedDate@@@dg_header_Last_Modified_Date@@@text]",
+				"PDFXLSColumns": "[loadBalancerName@@@dg_header_Name@@@C1T1],[locations@@@dg_header_Location@@@C2T1],[updatedDate@@@dg_header_Last_Modified_Date@@@C2B1@@@date],[healthyCountInstance@@@dg_header_Healthy@@@C3M1],[unhealthyCountInstance@@@dg_header_Unhealthy@@@C3M2]",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-load-balancers-savvis-hdr.xhtml"
+            },
+            "LOAD_BALANCER_NETSCALER":{
+            "ApplicableSecondaryResources" : "NETSCALER",
+            "DataGridColumns": "loadBalancerName@@@dg_header_Name,protocol@@@dg_header_Protocol,healthyCountInstance@@@dg_header_test,unhealthyCountInstance@@@dg_header_Status,status@@@dg_header_State,ipAddress@@@dg_ipaddress,details,method@@@dg_header_method,persistence@@@dg_header_persistence",
+                "SearchableColumns": "[loadBalancerName@@@dg_header_Name@@@text],[protocol@@@dg_header_Protocol@@@text],[status@@@dg_header_State@@@text],[ipAddress@@@dg_ipaddress@@@text],[method@@@dg_header_method@@@text],[persistence@@@dg_header_persistence@@@text]",
+				"PDFXLSColumns": "[loadBalancerName@@@dg_header_Name@@@C1T1],[protocol@@@dg_header_Protocol@@@C1B1],[status@@@dg_header_State@@@C1M1],[ipAddress@@@dg_ipaddress@@@C2T1],[method@@@dg_header_method@@@C2B1],[persistence@@@dg_header_persistence@@@C2B2],[healthyCountInstance@@@dg_header_Healthy@@@C3M1],[unhealthyCountInstance@@@dg_header_Unhealthy@@@C3M2],",
+                "SelectionMode": "single",
+                "ColumnsIncludeFile": "dt-load-balancers-netScaler-hdr.xhtml"
+            }
+        }
+    },
+    "LoadBalancerInstanceAWS": {
+        "PageName": "Load Balancers",
+        "MenuName": "Load Balancers",
+        "HelpFilePath": "/Provisioning/Provisioning Load Balancers.htm",
+        "Entities": {
+            "LOAD_BALANCER_INSTANCES": {
+            	"ApplicableProviders" : "AMAZON,VMWARE,SAVVIS",
+                "DataGridColumns": "nickName@@@dg_header_Instance,clusterName@@@dg_header_Availability_Zone,state@@@dg_header_State,displayIPs@@@dg_header_IP_Address,osName@@@dg_header_OS,userFullName@@@dg_header_Assignee,instanceTemplateName@@@dg_header_Compute_Profile,montoringProfileState@@@dg_header_Monitoring_State,userGroupName@@@dg_header_User_Group,lastBootTime@@@dg_header_Launch_Time@@@date,instanceName@@@dg_header_Name_in_Provider,instanceLoginStatus@@@dg_header_Instance_Login_Status,severity@@@dg_header_Severity,instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceUserName@@@dg_header_Instance_User_Name,LBInstanceStateString@@@dg_header_State,instanceState@@@dg_header_Instance_State",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[instanceName@@@dg_header_Name_in_Provider@@@text],[userGroupName@@@dg_header_User_Group@@@text]",
+                "PDFXLSColumns": "[nickName@@@dg_header_Instance@@@C1T1],[clusterName@@@dg_header_Availability_Zone@@@C1B1],[lastBootTime@@@dg_header_Launch_Time@@@C2B2],[state@@@dg_header_State@@@text],[displayIPs@@@dg_header_IP_Address@@@C2B1],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@C3T1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2T1],[instanceName@@@dg_header_Name_in_Provider@@@C3B2],[userGroupName@@@dg_header_User_Group@@@C3B1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-load-balancer-instances-aws-hdr.xhtml"
+            }
+        }
+    },
+    "ListCompliancePolicy": {
+        "PageName": "Compliance",
+        "MenuName": "Compliance",
+        "HelpFilePath": "/Analytics/Working with Compliance Policies.htm",
+        "Entities": {}
+    },
+    "IntegrationSystem": {
+        "PageName": "Integrations",
+        "MenuName": "integrations",
+        "HelpFilePath": "/Settings/Configuring Integration Systems.htm",
+        "Entities": {}
+    },
+    "ListEntityAdvisories": {
+        "PageName": "Reclamation",
+        "MenuName": "Reclamation",
+        "HelpFilePath": "/Analytics/Working with Reclamation.htm",
+        "Entities": {
+            "RECLAMATION": {
+                "DataGridColumns": "instanceTO.nickName@@@dg_header_Instance,instanceTO.deploymentName@@@dg_header_Deployment,instanceTO.instGroupName@@@dg_header_Instance_Group,instanceTO.state@@@dg_header_State,instanceTO.status@@@dg_header_Status,instanceTO.displayIPs@@@dg_header_IP_Address,instanceTO.osName@@@dg_header_OS,instanceTO.userFullName@@@dg_header_Assignee,instanceTO.instanceTemplateName@@@dg_header_Compute_Profile,instanceTO.userGroupName@@@dg_header_User_Group,instanceTO.lastBootTime@@@dg_header_Launch_Time@@@date,instanceTO.applicationInstanceName@@@dg_header_application_name,instanceTO.instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceTO.severity@@@dg_header_Severity,instanceTO.instanceLoginStatus@@@dg_header_Instance_Login_Status,instanceTO.instanceUserName@@@dg_header_Instance_User_Name,instanceTO.montoringProfileState@@@dg_header_Monitoring_Profile_State,instanceTO.instanceState@@@dg_header_Instance_State,instanceTO.tags@@@dg_header_Tags,instanceTO.instanceId@@@dg_header_InstanceId,instanceTO.complianceList@@@dg_header_complianceList,complianceState@@@dg_header_ComplianceState,instanceTO.monitoringTemplateName@@@dg_header_Monitoring_Profile",
+                "SearchableColumns": "[nickName@@@dg_header_Instance@@@text],[deploymentName@@@dg_header_Deployment@@@text],[instGroupName@@@dg_header_Instance_Group@@@text],[state@@@dg_header_State@@@text],[status@@@dg_header_Status@@@text],[displayIPs@@@dg_header_IP_Address@@@text],[osName@@@dg_header_OS@@@text],[userFullName@@@dg_header_Assignee@@@text],[instanceTemplateName@@@dg_header_Compute_Profile@@@text],[applicationInstanceName@@@dg_header_application_name@@@text],[userGroupName@@@dg_header_User_Group@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text]",
+                "PDFXLSColumns": "[osName@@@dg_header_OS@@@C0M1],[nickName@@@dg_header_Instance@@@C1T1],[deploymentName@@@dg_header_Deployment@@@C1B1],[instGroupName@@@dg_header_Instance_Group@@@C1B2],[severity@@@dg_header_Severity@@@C1M1],[state@@@dg_header_State@@@C1M2],[displayIPs@@@dg_header_IP_Address@@@C2T1],[instanceTemplateName@@@dg_header_Compute_Profile@@@C2B1,monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[montoringProfileState@@@dg_header_Monitoring_Profile_State@@@C2M1],[agentState@@@dg_header_Agent_State@@@C2M2],[userFullName@@@dg_header_Assignee@@@C3T1],[userGroupName@@@dg_header_User_Group@@@C3B1],[applicationInstanceName@@@dg_header_application_name@@@C3B2],[instanceLoginStatus@@@dg_header_Instance_Login_Status@@@C3M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-entity-advisory.xhtml"
+            }
+        }
+    }, 
+    "ListPatch": {
+        "PageName": "Patch Manager",
+        "MenuName": "Patch Manager",
+        "HelpFilePath": "/Analytics/Working with Reclamation.htm",
+        "Entities": {
+            "PATCH": {
+                "DataGridColumns": "patchDescription@@@dg_header_title,patchProduct@@@dg_header_product,patchCategory@@@dg_header_category,releaseDate@@@dg_header_releaseDate,patchStatuses@@@dg_header_statuses,patchApprovalStatus@@@dg_header_approvalStatus,patchWaitingToBeApproved@@@dg_header_approvalStatus",
+                "SearchableColumns": "[patchProduct@@@dg_header_product@@@text],[patchCategory@@@dg_header_category@@@text],[releaseDate@@@dg_header_releaseDate@@@text],[patchDescription@@@dg_header_title@@@text]",
+                "PDFXLSColumns": "[patchDescription@@@dg_header_title@@@C1T1],[patchProduct@@@dg_header_product@@@C2T1],[patchCategory@@@dg_header_category@@@C2B1],[releaseDate@@@dg_header_releaseDate@@@C3T1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-patch-hdr.xhtml"
+            }
+        }
+    },
+    "ListPlatformServices": {
+        "PageName": "Platform Services",
+        "MenuName": "Platform Services",
+        "HelpFilePath": "/Provisioning/Working with Platform Services.htm",
+        "Entities": {
+            "PAAS_DETAILS": {
+            	"ApplicableProviders" : "AMAZON",
+                "DataGridColumns": "name@@@dg_header_Name,serviceTypeDesc@@@dg_header_Service,monitoringTemplateName@@@dg_header_Monitoring_Profile,severity@@@dg_header_Severity",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[serviceTypeDesc@@@dg_header_Service@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[serviceTypeDesc@@@dg_header_Service@@@C1B1],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2T1],[severity@@@dg_header_Severity@@@C2M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-platform-service.xhtml"
+            },
+            "WEBAPPSAPPLICATIONS": {
+            	"ApplicableProviders" : "AZURE",
+                "DataGridColumns": "name@@@dg_header_Name,serviceStatus@@@dg_header_Status,datacenterName@@@dg_header_Location,monitoringStatus@@@dg_header_Monitoring_Profile_Status,serviceIPAddress@@@dg_header_Virtual_IPAddress,monitoringTemplateName@@@dg_header_Monitoring_Profile,serviceDeploymentUrl@@@dg_header_URL,severity@@@dg_header_Severity",
+                "SearchableColumns": "[name@@@dg_header_Name@@@text],[serviceStatus@@@dg_header_Status@@@text],[datacenterName@@@dg_header_Location@@@text],[monitoringStatus@@@dg_header_Monitoring_Profile_Status@@@text],[serviceIPAddress@@@dg_header_Virtual_IPAddress@@@text],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@text],[serviceDeploymentUrl@@@dg_header_URL@@@text]",
+                "PDFXLSColumns": "[name@@@dg_header_Name@@@C1T1],[serviceStatus@@@dg_header_Status@@@C1B1],[datacenterName@@@dg_header_Location@@@C2T1],[serviceIPAddress@@@dg_header_Virtual_IPAddress@@@C2B1],[monitoringTemplateName@@@dg_header_Monitoring_Profile@@@C2B2],[monitoringStatus@@@dg_header_Monitoring_Profile_Status@@@C2M1],[serviceDeploymentUrl@@@dg_header_URL@@@C3T1],[severity@@@dg_header_Severity@@@C1M1]",
+                "SelectionMode": "multi",
+                "ColumnsIncludeFile": "dt-webapps-applications.xhtml"
+            }
+        }
+    },
+     "ListPatchInstances": {
+        "PageName": "Patch Manager",
+        "MenuName": "Patch Manager",
+        "HelpFilePath": "/Provisioning/Creating Compute Instances using Custom Configuration.htm",
+        "Entities": {
+            "PATCH_INSTANCE": {
+                "DataGridColumns": "instanceName@@@dg_header_Name_in_Provider,nickName@@@dg_header_Instance,deploymentName@@@dg_header_Deployment,instGroupName@@@dg_header_Instance_Group,displayIPs@@@dg_header_IP_Address,userFullName@@@dg_header_Assignee,userGroupName@@@dg_header_User_Group",
+                "SearchableColumns": "",
+                "PDFXLSColumns": "",
+                "SelectionMode": "none",
+                "DataGridDisplayRecordCount": "10",
+                "ColumnsIncludeFile": "dt-patch-instance.xhtml"
+            }
+        }
+    },
+}
+
+

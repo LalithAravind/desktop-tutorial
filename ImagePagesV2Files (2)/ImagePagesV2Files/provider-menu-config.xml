@@ -1,0 +1,2621 @@
+<Providers>
+	<Provider name="VMWARE">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>13</MenuId>
+				<MenuName>Compute Snapshots</MenuName>
+				<MenuDescription>Compute Snapshots</MenuDescription>
+				<MenuURL>provisioning/instance-snapshot.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Snapshot:Read_UI</MenuPermission>
+				<MenuPosition>3</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>14</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>119</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-image-Message.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>21</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>22</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>23</MenuId>
+				<MenuName>Placement Policies</MenuName>
+				<MenuDescription>Placement Policies</MenuDescription>
+				<MenuURL>policies/list-intelligent-policy.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Placement Profiles:Read_UI</MenuPermission>
+				<MenuPosition>104</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>24</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>25</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>31</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>34</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>38</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>39</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>53</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>61</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="AMAZON">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>13</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>14</MenuId>
+				<MenuName>Storage Snapshots</MenuName>
+				<MenuDescription>Storage Snapshots</MenuDescription>
+				<MenuURL>provisioning/list-all-ebs-snapshot.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage Snapshot:Create_UI</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>15</MenuId>
+				<MenuName>Object Storage</MenuName>
+				<MenuDescription>Object Storage</MenuDescription>
+				<MenuURL>provisioning/list-all-s3buckets.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Object Storage:Read_UI</MenuPermission>
+				<MenuPosition>6</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>16</MenuId>
+				<MenuName>Load Balancers</MenuName>
+				<MenuDescription>Load Balancers</MenuDescription>
+				<MenuURL>provisioning/list-load-balancers.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Load Balancer:Read_UI</MenuPermission>
+				<MenuPosition>7</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>17</MenuId>
+				<MenuName>IP Addresses</MenuName>
+				<MenuDescription>IP Addresses</MenuDescription>
+				<MenuURL>provisioning/ElasticIp.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>IP Address:Read_UI</MenuPermission>
+				<MenuPosition>8</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>18</MenuId>
+				<MenuName>Network</MenuName>
+				<MenuDescription>Network</MenuDescription>
+				<MenuURL>provisioning/list-eni.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Network:Read_UI</MenuPermission>
+				<MenuPosition>9</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>19</MenuId>
+				<MenuName>Database Services</MenuName>
+				<MenuDescription>Database Services</MenuDescription>
+				<MenuURL>provisioning/list-database-services.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Database Services:Read_UI</MenuPermission>
+				<MenuPosition>10</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>20</MenuId>
+				<MenuName>Database Snapshots</MenuName>
+				<MenuDescription>Database Snapshots</MenuDescription>
+				<MenuURL>provisioning/list-database-snapshots.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Database Snapshots:Read_UI</MenuPermission>
+				<MenuPosition>11</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>71</MenuId>
+				<MenuName>Platform Services</MenuName>
+				<MenuDescription>Platform Services</MenuDescription>
+				<MenuURL>provisioning/list-platformServices.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Platform Services:Read_UI</MenuPermission>
+				<MenuPosition>12</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>120</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>21</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>22</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>23</MenuId>
+				<MenuName>Storage Profiles</MenuName>
+				<MenuDescription>Storage Profiles</MenuDescription>
+				<MenuURL>policies/list-storage-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage Profiles:Read_UI</MenuPermission>
+				<MenuPosition>103</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>26</MenuId>
+				<MenuName>Placement Policies</MenuName>
+				<MenuDescription>Placement Policies</MenuDescription>
+				<MenuURL>policies/list-intelligent-policy.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Placement Profiles:Read_UI</MenuPermission>
+				<MenuPosition>104</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>24</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>25</MenuId>
+				<MenuName>Automation Policies</MenuName>
+				<MenuDescription>Automation Policies</MenuDescription>
+				<MenuURL>policies/list-automation-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>106</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>31</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>34</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>38</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>39</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>47</MenuId>
+				<MenuName>Provider Billing</MenuName>
+				<MenuDescription>Provider Billing</MenuDescription>
+				<MenuURL>analytics/billing-activity.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provider Billing:Read_UI</MenuPermission>
+				<MenuPosition>307</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>51</MenuId>
+				<MenuName>Firewalls</MenuName>
+				<MenuDescription>Firewalls</MenuDescription>
+				<MenuURL>security/list-security-groups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Security Groups:Read_UI]]></MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>52</MenuId>
+				<MenuName>Key Pairs</MenuName>
+				<MenuDescription>Key Pairs</MenuDescription>
+				<MenuURL>security/list-keyPair.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Key Pairs:Read_UI</MenuPermission>
+				<MenuPosition>402</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>53</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>403</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>61</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="EUCALYPTUS">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>13</MenuId>
+				<MenuName>Storage Snapshots</MenuName>
+				<MenuDescription>Storage Snapshots</MenuDescription>
+				<MenuURL>provisioning/list-all-ebs-snapshot.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage Snapshot:Create_UI</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>14</MenuId>
+				<MenuName>Object Storage</MenuName>
+				<MenuDescription>Object Storage</MenuDescription>
+				<MenuURL>provisioning/list-all-s3buckets.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Object Storage:Read_UI</MenuPermission>
+				<MenuPosition>6</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>15</MenuId>
+				<MenuName>Network</MenuName>
+				<MenuDescription>Network</MenuDescription>
+				<MenuURL>provisioning/ElasticIp.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Network:Read_UI</MenuPermission>
+				<MenuPosition>9</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>121</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>22</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>21</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>23</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>24</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>31</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>34</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>38</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>39</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>51</MenuId>
+				<MenuName>Firewalls</MenuName>
+				<MenuDescription>Firewalls</MenuDescription>
+				<MenuURL>security/list-security-groups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Security Groups:Read_UI]]></MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>52</MenuId>
+				<MenuName>Key Pairs</MenuName>
+				<MenuDescription>Key Pairs</MenuDescription>
+				<MenuURL>security/list-keyPair.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Key Pairs:Read_UI</MenuPermission>
+				<MenuPosition>402</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>53</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>403</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>61</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="POWERVM">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>13</MenuId>
+				<MenuName>Compute Snapshots</MenuName>
+				<MenuDescription>Compute Snapshots</MenuDescription>
+				<MenuURL>provisioning/instance-snapshot.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Snapshot:Read_UI</MenuPermission>
+				<MenuPosition>3</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>14</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>122</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>21</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>22</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>23</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>103</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>31</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>34</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>38</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>53</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>61</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="SAVVIS">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>19</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>101</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>102</MenuId>
+				<MenuName>Compute Snapshots</MenuName>
+				<MenuDescription>Compute Snapshots</MenuDescription>
+				<MenuURL>provisioning/instance-snapshot.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>Snapshot:Read_UI</MenuPermission>
+				<MenuPosition>3</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>103</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>104</MenuId>
+				<MenuName>Load Balancers</MenuName>
+				<MenuDescription>Load Balancers</MenuDescription>
+				<MenuURL>provisioning/list-load-balancers.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Load Balancer:Read_UI</MenuPermission>
+				<MenuPosition>7</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>123</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>201</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>202</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>204</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>205</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>301</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>304</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>308</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>309</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>51</MenuId>
+				<MenuName>Firewalls</MenuName>
+				<MenuDescription>Firewalls</MenuDescription>
+				<MenuURL>security/list-security-groups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Security Groups:Read_UI]]></MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>501</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>402</MenuPosition>
+			</MenuItem>
+
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>601</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="AZURE">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>110</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>111</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>112</MenuId>
+				<MenuName>Compute Snapshots</MenuName>
+				<MenuDescription>Compute Snapshots</MenuDescription>
+				<MenuURL>provisioning/instance-snapshot.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>Snapshot:Read_UI</MenuPermission>
+				<MenuPosition>3</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>115</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>113</MenuId>
+				<MenuName>Object Storage</MenuName>
+				<MenuDescription>Object Storage</MenuDescription>
+				<MenuURL>provisioning/list-all-s3buckets.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Object Storage:Read_UI</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>117</MenuId>
+				<MenuName>IP Addresses</MenuName>
+				<MenuDescription>IP Addresses</MenuDescription>
+				<MenuURL>provisioning/ElasticIp.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>IP Address:Read_UI</MenuPermission>
+				<MenuPosition>8</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>114</MenuId>
+				<MenuName>Database Services</MenuName>
+				<MenuDescription>Database Services</MenuDescription>
+				<MenuURL>provisioning/list-database-services.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>10</MenuPosition>
+			</MenuItem>		
+			<MenuItem>
+				<MenuId>115</MenuId>
+				<MenuName>Network</MenuName>
+				<MenuDescription>Network</MenuDescription>
+				<MenuURL>provisioning/list-eni.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Network:Read_UI</MenuPermission>
+				<MenuPosition>6</MenuPosition>
+			</MenuItem>	
+			<MenuItem>
+				<MenuId>116</MenuId>
+				<MenuName>Platform Services</MenuName>
+				<MenuDescription>Platform Services</MenuDescription>
+				<MenuURL>provisioning/list-platformServices.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Platform Services:Read_UI</MenuPermission>
+				<MenuPosition>12</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>118</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>201</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>202</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>203</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>103</MenuPosition>
+           </MenuItem>
+           <MenuItem>
+				<MenuId>204</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>310</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>311</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>312</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>319</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>511</MenuId>
+				<MenuName>Firewalls</MenuName>
+				<MenuDescription>Firewalls</MenuDescription>
+				<MenuURL>security/list-security-groups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Security Groups:Read_UI]]></MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>510</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>610</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="SCVMM">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>901</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>902</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>124</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>921</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>922</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>925</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>926</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>931</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>934</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>938</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>939</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>953</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>961</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="TERREMARK_ECLOUD">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>901</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>902</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>125</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>921</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>922</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>924</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>925</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>931</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>934</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>938</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>939</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>953</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>961</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="OPENSTACK">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>901</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>902</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>903</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>3</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>904</MenuId>
+				<MenuName>Storage Snapshots</MenuName>
+				<MenuDescription>Storage Snapshots</MenuDescription>
+				<MenuURL>provisioning/list-all-ebs-snapshot.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage Snapshot:Create_UI</MenuPermission>
+				<MenuPosition>4</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>126</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>921</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>922</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>924</MenuId>
+				<MenuName>Provisioning Policies</MenuName>
+				<MenuDescription>Provisioning Policies</MenuDescription>
+				<MenuURL>policies/list-usage-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>105</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>925</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>106</MenuPosition>
+           </MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>931</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>934</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>938</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>939</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>953</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" landingPage="no" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>961</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="PHYSICAL_SERVERS">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>902</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>127</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>931</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>938</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>47</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>307</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>953</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Provider name="IBMSL">
+	<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+				<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL>provisioning/list-applications.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Applications:Read_UI</MenuPermission>
+				<MenuPosition>1</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Compute</MenuName>
+				<MenuDescription>Compute</MenuDescription>
+				<MenuURL>provisioning/list-instances.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>2</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>128</MenuId>
+				<MenuName>Images</MenuName>
+				<MenuDescription>Images</MenuDescription>
+				<MenuURL>provisioning/list-images.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>5</MenuPosition>
+			</MenuItem>
+			</MenuItems>
+			<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>921</MenuId>
+				<MenuName>Application Profiles</MenuName>
+				<MenuDescription>Application Profiles</MenuDescription>
+				<MenuURL>policies/list-provisioning-workflow.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Provisioning Workflow:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+				<MenuItem>
+				<MenuId>22</MenuId>
+				<MenuName>Compute Profiles</MenuName>
+				<MenuDescription>Compute Profiles</MenuDescription>
+				<MenuURL>policies/list-service-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Service Profile:Read_UI</MenuPermission>
+				<MenuPosition>102</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+                 <MenuId>23</MenuId>
+                 <MenuName>Automation Policies</MenuName>
+                 <MenuDescription>Automation Policies</MenuDescription>
+                 <MenuURL>policies/list-automation-policies.cl</MenuURL>
+                 <MenuEnabled>true</MenuEnabled>
+                 <MenuPermission>Automation Policies:Read_UI</MenuPermission>
+                 <MenuPosition>103</MenuPosition>
+           </MenuItem>
+			</MenuItems>
+			<MenuItems id="3" name="Monitoring" status="enabled" imageName="BtnMonitoring.gif"
+			styleClassName="menuItemMonitoring">
+			<MenuItem>
+				<MenuId>31</MenuId>
+				<MenuName>Events</MenuName>
+				<MenuDescription>Events</MenuDescription>
+				<MenuURL>monitoring/list-events.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Events:Read_UI</MenuPermission>
+				<MenuPosition>201</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>34</MenuId>
+				<MenuName>Apps - Discovery</MenuName>
+				<MenuDescription>Apps - Discovery</MenuDescription>
+				<MenuURL>monitoring/list-jmx-instance-discovery.cl</MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>202</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>38</MenuId>
+				<MenuName>Monitoring Profiles</MenuName>
+				<MenuDescription>Monitoring Profiles</MenuDescription>
+				<MenuURL>monitoring/list-all-monitoring-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Monitoring Profiles:Read_UI</MenuPermission>
+				<MenuPosition>203</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>39</MenuId>
+				<MenuName>Monitoring Policies</MenuName>
+				<MenuDescription>Monitoring Policies</MenuDescription>
+				<MenuURL>monitoring/list-monitoring-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>204</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="4" name="Advisor" status="enabled" imageName="BtnAnalytics.gif"
+			styleClassName="menuItemAnalytics">
+			<MenuItem>
+				<MenuId>41</MenuId>
+				<MenuName>Trends</MenuName>
+				<MenuDescription>Trends</MenuDescription>
+				<MenuURL>analytics/charts.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Trending:Read_UI</MenuPermission>
+				<MenuPosition>301</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>42</MenuId>
+				<MenuName>Compliance</MenuName>
+				<MenuDescription>Compliance</MenuDescription>
+				<MenuURL>analytics/list-compliance-policies.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Automation Policies:Read_UI</MenuPermission>
+				<MenuPosition>302</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>43</MenuId>
+				<MenuName>Metering</MenuName>
+				<MenuDescription>Metering</MenuDescription>
+				<MenuURL>analytics/list-showbackcost-details.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Metering:Read_UI</MenuPermission>
+				<MenuPosition>303</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>44</MenuId>
+				<MenuName>Reclamation</MenuName>
+				<MenuDescription>Reclamation</MenuDescription>
+				<MenuURL>analytics/list-entity-advisories.cl</MenuURL>				
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Compute Instance:Read_UI</MenuPermission>
+				<MenuPosition>304</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>45</MenuId>
+				<MenuName>Tasks</MenuName>
+				<MenuDescription>Tasks</MenuDescription>
+				<MenuURL>analytics/list-job-management.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission><![CDATA[Jobs and Tasks:Read_UI]]></MenuPermission>
+				<MenuPosition>305</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>46</MenuId>
+				<MenuName>Reports</MenuName>
+				<MenuDescription>Reports</MenuDescription>
+				<MenuURL>analytics/list-all-reports.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Reports:Read_UI</MenuPermission>
+				<MenuPosition>306</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>48</MenuId>
+				<MenuName>Patch Manager</MenuName>
+				<MenuDescription>Patch Manager</MenuDescription>
+				<MenuURL>analytics/list-all-patches.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Patch Manager:Read_UI</MenuPermission>
+				<MenuPosition>308</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>49</MenuId>
+				<MenuName>Change Tracking</MenuName>
+				<MenuDescription>Change Tracking</MenuDescription>
+				<MenuURL>analytics/change-monitoring.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Change Monitoring:Read_UI</MenuPermission>
+				<MenuPosition>309</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="5" name="Security" status="enabled" imageName="BtnSecurity.gif"
+			styleClassName="menuItemSecurity">
+			<MenuItem>
+				<MenuId>53</MenuId>
+				<MenuName>Roles and Permissions</MenuName>
+				<MenuDescription>Roles and Permissions</MenuDescription>
+				<MenuURL>security/role-permission.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Roles:Read_UI</MenuPermission>
+				<MenuPosition>401</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="6" name="Integration" status="disabled" landingPage="no" imageName="BtnIntegration.gif">
+			<MenuItem>
+				<MenuId>61</MenuId>
+				<MenuName>Applications</MenuName>
+				<MenuDescription>Applications</MenuDescription>
+				<MenuURL></MenuURL>
+				<MenuEnabled>hidden</MenuEnabled>
+				<MenuPermission>NA</MenuPermission>
+				<MenuPosition>501</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Provider>
+	<Common name="COMMON">
+		<MenuItems id="700" name="Settings" status="enabled" landingPageEnalbed="false"
+			imageName="BtnSettings.gif" styleClassName="menuItemSettings">
+			<MenuItem>
+				<MenuId>710</MenuId>
+				<MenuName>Cloud</MenuName>
+				<MenuDescription>Cloud</MenuDescription>
+				<MenuURL>settings/cloud-settings.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Cloud:Read_UI</MenuPermission>
+				<MenuPosition>601</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>711</MenuId>
+				<MenuName>Integrations</MenuName>
+				<MenuDescription>Integrations</MenuDescription>
+				<MenuURL>settings/list-integration-system.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Integrations:Read_UI</MenuPermission>
+				<MenuPosition>602</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>712</MenuId>
+				<MenuName>Instance Groups</MenuName>
+				<MenuDescription>Instance Groups</MenuDescription>
+				<MenuURL>settings/list-appgroups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Instance Groups:Read_UI</MenuPermission>
+				<MenuPosition>603</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>713</MenuId>
+				<MenuName>Deployments</MenuName>
+				<MenuDescription>Deployments</MenuDescription>
+				<MenuURL>settings/list-deployments.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Deployments:Read_UI</MenuPermission>
+				<MenuPosition>604</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>714</MenuId>
+				<MenuName>User Groups</MenuName>
+				<MenuDescription>User Groups</MenuDescription>
+				<MenuURL>settings/list-usergroups.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>User Groups:Read_UI</MenuPermission>
+				<MenuPosition>605</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>715</MenuId>
+				<MenuName>Users</MenuName>
+				<MenuDescription>Users</MenuDescription>
+				<MenuURL>settings/list-users.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Users:Read_UI</MenuPermission>
+				<MenuPosition>606</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>716</MenuId>
+				<MenuName>Notifications</MenuName>
+				<MenuDescription>Notifications</MenuDescription>
+				<MenuURL>settings/action-notification.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Notifications:Read_UI</MenuPermission>
+				<MenuPosition>607</MenuPosition>
+			</MenuItem>
+			<MenuItem>
+				<MenuId>716</MenuId>
+				<MenuName>Diagnostics</MenuName>
+				<MenuDescription>Diagnostics</MenuDescription>
+				<MenuURL>settings/diagnostic.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Special Privileges:Read_UI</MenuPermission>
+				<MenuPosition>608</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</Common>
+	<SecondaryResource name="NETAPP">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+			<MenuItem>
+				<MenuId>11</MenuId>
+				<MenuName>Storage</MenuName>
+				<MenuDescription>Storage</MenuDescription>
+				<MenuURL>provisioning/list-datastores.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage:Read_UI</MenuPermission>
+				<MenuPosition>101</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		<MenuItems id="2" name="Automation" status="enabled" imageName="BtnPolicies.gif"
+			styleClassName="menuItemPolicies">
+			<MenuItem>
+				<MenuId>21</MenuId>
+				<MenuName>Storage Profiles</MenuName>
+				<MenuDescription>Storage Profiles</MenuDescription>
+				<MenuURL>policies/list-storage-profiles.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Storage Profiles:Read_UI</MenuPermission>
+				<MenuPosition>103</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+	</SecondaryResource>
+		<SecondaryResource name="NETSCALER">
+		<MenuItems id="1" name="Provisioning" status="enabled" imageName="BtnProvisioning.gif"
+			styleClassName="menuItemProvisioning">
+				<MenuItem>
+				<MenuId>12</MenuId>
+				<MenuName>Load Balancers</MenuName>
+				<MenuDescription>Load Balancers</MenuDescription>
+				<MenuURL>provisioning/list-load-balancers.cl</MenuURL>
+				<MenuEnabled>true</MenuEnabled>
+				<MenuPermission>Load Balancer:Read_UI</MenuPermission>
+				<MenuPosition>7</MenuPosition>
+			</MenuItem>
+		</MenuItems>
+		</SecondaryResource>
+</Providers>
+

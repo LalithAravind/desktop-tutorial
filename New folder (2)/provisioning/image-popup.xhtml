@@ -1,0 +1,107 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:c1="http://cloudone.cognizant.com/jsf/extn"
+	xmlns:shiro="http://shiro.apache.org/tags">
+	<f:view>
+	<!--Action definition starts here-->
+	
+	<a4j:outputPanel id="create_image">
+	<div id="create_image" class="popup_block">
+	<div id="popUpTitle"><c1:outputText value="#{labels.azure_add_new_image}" /></div>
+	<div class="popupdata">
+	<table class="popupContentLayout1">
+	<tr class="blankRowHeight"></tr>
+	<tr>
+		<td class="firstColumn">
+		<h:selectOneRadio
+		id="classicRadio"
+		immediate="true">
+		<f:selectItem itemLabel="#{labels.azure_classic_label}" itemValue="#{labels.azure_classic_label}" />	
+		</h:selectOneRadio>								
+		</td>
+		<td class="secondColumn"><h:selectOneRadio id="resourceManagRadio" immediate="true">
+		<f:selectItem itemLabel="#{labels.azure_resource_manger_label}" itemValue="#{labels.azure_resource_manger_label}" />
+		</h:selectOneRadio>
+		</td>
+	</tr>
+	<tr class="blankRowHeight"></tr>
+	<tr>
+			<td class="firstColumn">
+			<c1:outputText
+			value="#{labels.dg_header_Location}" mandatory="true" />
+			</td>
+			<td class="secondColumn">
+			<c1:selectOneMenu
+				id="locationsId" lengthtype="long" 
+				 associatedFieldName="#{labels.dg_header_Location}"
+				value=""
+				immediate="true" >
+				 <f:selectItem itemLabel="#{labels.default_select_option_text}" itemValue="" /> 
+				  <f:selectItem itemLabel="" itemValue="" />	
+				  </c1:selectOneMenu>
+			
+			</td>
+	</tr>
+	<tr class="blankRowHeight"></tr>
+	<tr>
+	<td class="firstColumn">
+			<c1:outputText
+			value="Publisher" mandatory="true" />
+			</td>
+			
+			<td style="padding-left:10px; width=25px;" class="firstColumn" >
+			<c1:selectOneMenu
+				id="publisherID"  width="20"
+				 associatedFieldName="Publisher"
+				value=""
+				immediate="true" >
+				 <f:selectItem itemLabel="#{labels.default_select_option_text}" itemValue="" /> 
+				  <f:selectItem itemLabel="" itemValue="" />	
+				  </c1:selectOneMenu>
+				  <c1:outputText style="float:right;padding-right:55px;padding-top:5px;" 
+			value="Offer(OS)" mandatory="true" />
+			</td>
+			
+			
+			<td>			
+			
+			</td>
+			
+			
+			<td >
+			<c1:selectOneMenu
+				id="osId" width="20"
+				 associatedFieldName="Offer(OS)"
+				value=""
+				immediate="true" >
+				 <f:selectItem itemLabel="#{labels.default_select_option_text}" itemValue="" /> 
+				  <f:selectItem itemLabel="" itemValue="" />	
+				  </c1:selectOneMenu>
+			
+			</td>
+	</tr>
+	<tr class="blankRowHeight"></tr>
+	</table>
+	</div>
+	</div>
+	</a4j:outputPanel>
+	
+	
+		<script type="text/javascript">
+			cssdropdown.startMenu("chromemenu1");
+			
+			var datacenters = ["West US", "East US", "Central India"];
+		
+			
+		</script>
+	<input type="hidden" name="selectedRowIds" id="selectedRowIds" value=""/>
+	<!--Action definition ends here-->
+	</f:view>
+</ui:composition>
+	

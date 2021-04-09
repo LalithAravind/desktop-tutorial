@@ -1,0 +1,77 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:shiro="http://shiro.apache.org/tags"
+	xmlns:a4j="http://richfaces.org/a4j">
+	<f:view>
+		<link rel="stylesheet" href="#{navigationController.resourceServerAddress}/css/app/c1-datatable.css" type="text/css" />
+		<script type="text/javascript" language="javascript" src="#{navigationController.resourceServerAddress}/script/ext/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="#{navigationController.resourceServerAddress}/script/ext/templates.js"></script>
+		<script src="#{navigationController.resourceServerAddress}/script/ext/jquery.contextMenu.js" type="text/javascript"></script>
+		<script type="text/javascript" language="javascript" src="#{navigationController.resourceServerAddress}/script/app/c1-datatable.js"></script>
+		<script>
+						//<![CDATA[
+							function getCols(){
+										var colDefs = [
+													{	
+														"fnRender": function (oObj) {
+															var aaData = oObj.aData;	
+															return '<div class="columnComb"><div class="columnOne" title="'+aaData.imageName_title+'"> '+aaData.imageName+' </div><div class="instanceNameIcon" style="background: url(#{navigationController.resourceServerAddress}/images/spr/commonS.png) '+aaData.osName+' no-repeat;" title="'+aaData.osName_title+'"> &nbsp; </div></div>'
+														},
+														"aTargets": [0]
+													},
+													{	
+														"fnRender": function (oObj) {
+															var aaData = oObj.aData;	
+															return '<div class="columnComb"><div class="columnOne" title="'+aaData.imageDetails_title+'"> ' + aaData.imageDetails+' </div></div>'
+														},
+														"aTargets": [1]
+													}
+												];
+										return colDefs;
+							}
+								var c1dt;
+							(function() {jQuery(function() {
+									c1dt = new C1DataTable("#{dataGridIdPrefix}_#{entityType}",{});	
+									c1dt.dgRowClickCallBack = function(){
+										document.getElementById("addImageFormId:selectImageRowId").onclick();
+									}
+									c1dt.dgCallBack = function(){
+										var imageSelected = jQuery("#selectedRowIds").val();
+										if(imageSelected == ""){
+								           	c1dt.selectFirstRow();    
+										}                                                                                                             
+									}
+									c1dt.loadCustomGrid("#{param['isfirst']}","",'#{param["reqOptions"]}');
+							} );})();
+							function bindAllEvents(){
+								c1dt.getSelectedValues();
+						  	}
+
+											  	
+						//]]>
+						</script>
+		<div id="container">
+		<div id="dynamic">
+		<table cellpadding="0" cellspacing="0" border="0"
+			class="display dataGridInstances"
+			id="#{dataGridIdPrefix}_#{entityType}"
+			style="display: none">
+			<thead class="dtHeader">
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div class="mediumDivHeight"></div>
+		<input type="button" id="showMore" value="Show More"
+			 /></div>
+		<div class="mediumDivHeight"></div>
+		<div class="hiddenTemplateDiv" ></div>
+		<div class="hiddenTemplateDiv1"></div>
+		<div class="hiddenHeaderTemplateDiv" ></div>
+		</div>
+	</f:view>
+</ui:composition>
